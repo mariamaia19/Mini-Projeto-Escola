@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html  lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="menu-dropdown.css">
+  	<link rel="stylesheet" href="body.css">
+	<link rel="stylesheet" href="footer.css">
+	<link rel="stylesheet" href="">
+	<link rel="preconnect" href="https://fonts.googleapis.com"> <!--GOOGLE FONTS POPPINS-->
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> <!--GOOGLE FONTS-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--GOOGLE FONTS JERSEY-->
+	<link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sedan+SC&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="img/Imagem1.png">
+	<title>Contato - Instituto Gnosis BRASIL</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+  />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"><!--INCORPORAÇÃO DE BOOTSTRAP-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+	<header>
+		<div class="logotipo" id="escola">
+			<a href="index.html"><img src="ChatGPT_Image_28_de_mai._de_2025__18_02_36-removebg-preview.png" alt="logotipo da Escola Jacaré Feliz" style="height: 70px;"></a> <!--para adicionar link na imagem, coloque a imagem dentro da tag a-->
+		</div>
+    <!--<form>
+		  <input type="search" name="caixa-busca" placeholder="O que está buscando?" class="campo" size="25">
+		  <button type="button" class="botao botao-busca" name="buscar">Buscar</button>
+	  </form>-->
+		<nav>
+				<ul>
+					<li><a class="a-text" href="index.html">Início</a></li>
+					<li class="dropdown">
+            			<a class="a-text">A EJF▾</a>
+            				<ul>
+              					<div class="dropdown-content" id="drop-cont">
+                          <li><a class="a-text" href="quemsomos.html">Quem Somos</a></li>
+									        <li><a class="a-text2" href="#">Séries▸</a></li>
+									        <li><a class="a-text2" href="programacao.html">Eventos▸</a></li>
+									        <li class="sub-dropdown"><a class="a-text2" href="programacao.html">Institucional▸</a>
+										        <ul>
+											        <div class="dropdown-content2" id="drop_cont2">
+											          <li><a class="a-text2" href="loginaluno.html" target="_blank">Portal do Aluno</a></li>
+											          <li><a class="a-text2" href="#" target="_blank">Portal dos Pais</a></li>
+											          <li><a class="a-text2" href="#" target="_blank">Portal do Professor</a></li>
+                              </div>
+                            </ul>	
+                          </li>
+                        </div>	
+            				</ul>
+          			</li>
+					<li class="dropdown"> <!--A classe vem no li ou na div??-->
+							<a class="a-text" href="location.html" onclick="showdropdown()">Unidades▾</a> <!--tem que ter dropdown-->
+								<!--<ul>
+									<div class="dropdown-content">
+										<li><a class="a-text2" href="quemsomos.html">Encontre uma unidade </a></li>
+										<li><a class="a-text2" href="contato.html">Seja um franqueado ▸</a></li>
+									</div>	
+								</ul>-->
+					<li class="dropdown">
+						<a class="a-text" href=# onclick="showdropdown()">Contato▾</a>
+							<ul>
+									<div class="dropdown-content" id="drop_cont2">
+										<li><a class="a-text2" href="quemsomos.html">Fale Conosco▸</a></li>
+										<li><a class="a-text2" href="matriculas.html">Matrículas▸</a></li>
+										<li><a class="a-text2" href="contato.html">Trabalhe com a gente▸</a></li>
+									</div>	
+								</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>        
+	</header>
+	<div class="heroimg_contato">
+		<div class="herotext_contato">
+			<h2><b>TRABALHE CONOSCO</b></h2>
+			<p>Venha fazer parte da nossa equipe</p>
+		</div>
+	</div>
+	<div class="contato-form">
+    	<h3 id="texto_tres">Preencha o Formulário abaixo</h3>
+		<p>Em breve um representante entrará em contato</p>
+    	<div class="formulario">
+		<form action="" method="post" class="formulario-inscricao">
+			<label for="nome">Nome</label>
+			<input type="text" placeholder="Informe seu nome" id="nome">
+			<label for="sobrenome">Sobrenome</label>
+			<input type="text" placeholder="Informe seu sobrenome" id="sobrenome">
+			<label for="e-mail">E-mail</label>
+			<input type="text" placeholder="E-mail" id="email">
+			<label for="contato">Contato</label>
+			<input type="text" placeholder="Informe seu número" id="contato">
+			<label for="assunto">Contato</label><textarea name="assunto" id="assunto" placeholder="Digite aqui sua dúvida" rows="7" cols="40"></textarea>
+			<button class="submeter">Submeter</button>
+		</form>
+    </div>
+  </div>
+  <section class="void" style="height: 10vh;"></section>
+	<footer>
+			<div>
+			   <a href="index.html">
+					<img src="img/ChatGPT_Image_28_de_mai._de_2025__18_02_36-removebg-preview.png" style="height: 80px;" alt="logo da escola jacaré Feliz">
+			   </a>
+			</div>
+			<div class="container-footer">
+				<div class="rodape-info">
+					<h3 class="h3_rodape">Ensino</h3>
+					<a class="a-style-footer"  href="#">Berçário</a>
+					<a class="a-style-footer"  href="#">Creche-escola</a>
+					<a class="a-style-footer"  href="#">Jardim de Infância</a>
+					<a class="a-style-footer"  href="#">Ensino Fundamental I</a>
+				</div>
+				<div class="rodape-info">
+					<h3 class="h3_rodape">Entre em Contato</h3>
+					<div class="contato-link">
+						<a class="a-style" href="https://w.app/gnosisbrasilsalvador" target="_blank"><img src="img/58-removebg-previewin.png" alt="logo clicável do LinkedIn" class="insta-img"></a>
+						<a class="a-style" href="https://w.app/gnosisbrasilsalvador" target="_blank"><img src="img/58-removebg-preview.png" alt="logo clicável do Whatsapp" class="insta-img"></a>
+						<a class="a-style"  href="#"><img src="img/configuracao-de-circulos-de-e-mail_1_-removebg-preview.png" alt="logo clicável do LinkedIn" class="insta-img"></a>
+						<a class="a-style"  href="https://www.instagram.com/gnosisbrasil.salvador?igshid=MzRlODBiNWFlZA%3D%3D" target="_blank"><img src="img/58-removebg-previewinsta.png" alt="logo clicável do Instagram" class="insta-img"></a>
+					</div>
+				</div>
+					
+				<div class="rodape-info">
+					<h3 class="h3_rodape">Unidades</h3>
+					<a class="a-footer" href="https://w.app/gnosisbrasilsalvador" target="_blank">Unidade ABCD</a>
+					<a class="a-footer"  href="#">Unidade EFGH</a>
+
+				</div>
+				<div class="rodape-info">
+					<h3 class="h3_rodape">Sobre e Termos</h3>
+					<a class="a-style"  href="quemsomos.html">Quem Somos</a>
+					<a class="a-style" href="#">Links de Referência</a>
+				</div>
+			</div>
+			<div id="nota">
+				<h4>Escola Jacaré Feliz LTDA. Todos os direitos reservados©.</h4>
+			</div>
+		</footer>
+		<a class="whats-button" href="https://wa.me/5527981821964?text=Gostaria%20de%20matricular%20meu(minha)%20filho(a)" target="_blank"><img src="img/10464266.png" class="whats-img"></a>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="card.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+		<script src="scripts.js"></script>
+	</body>
+</html>

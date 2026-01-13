@@ -1,0 +1,312 @@
+body {
+    background-color: url(img/abstract-surface-textures-white-concrete-stone-wall.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*======DEFININDO RESET DA PÁGINA - CONFIGURAÇÕES GERAIS QUE SERÃO INCPORADOS A TODAS AS PÁGINAS=========
+Estes padrões aqui estão sendo aplicados para DESKTOP:*/
+
+* { /*RESETD DA PÁGINA*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+  }
+   /*IMPORTANDO FONTES DE FORA (DOWNLOADS)*/
+  @font-face {
+      font-family: 'rustling_treesregular';
+      src: url('webfontkit-20240527-124332/rustling-trees-regular_-_copia-webfont.woff2') format('woff2'),
+           url('webfontkit-20240527-124332/rustling-trees-regular_-_copia-webfont.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+  
+  @font-face {
+      font-family: 'latomedium';
+      src: url('lato-mediun-webfont.woff2') format('woff2'),
+           url('lato-mediun-webfont.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+  
+  /* CLASSES EXISTENTES NESTE DOCUMENTO:
+      whats-button; a-style; .logotipo. container(classe bootstrap); date; hamburger; carousel(classe bootstrap)
+  */
+ 
+   /*VARIÁVEIS DE ESTILO DE PÁGINA FONTES CORES ETC*/
+  :root {
+    --bkg1: rgb(239, 255, 10);
+    --bkg2: rgb(8, 36, 68);
+    --hover:  #fdfd40;
+    --menutxt: white;
+    --button_color: #ffc907;
+    --shad: rgb(52, 52, 52);
+    --footer: rgb(12,52,84);
+    --fonte_principal: 'rustling_treesregular';
+    --fonte_secundaria: 'latomedium', sans-serif;
+    --fonte_terciaria: "Constantia";
+  }
+
+ 
+
+/* ========APRESENTAÇÃO DA TELA PARA MAIORES DE 1200PX ========== */
+  
+  ul { /*quem deve receber as alterações é o ul, não o menu*/
+    list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .a-text {text-decoration: none; 
+      color: white;
+      cursor: pointer;
+    }
+  
+  /*=========== CONSTRUÇÃO DO MENU DROPDOWN =============*/
+  /*========= OS ELEMENTOS QUE SÃO DO TIPO BLOCK COMO LI E DIV DEVEM RECEBER DISPLAY FLEX=========*/
+  header {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-items: center;
+      background-color: var(--button_color);
+  }
+  
+  .logotipo {
+      width: 25%;
+      height: 70px;
+  }
+  
+  .container h2{font-family: var(--fonte_principal); color: var(--menutxt); font-size: 70px; text-align: center;}
+  
+  .container-content {
+      font-size: 25px;
+      text-align: center;
+  }
+  
+   /*MENU SANDUÍCHE-ICHE*/
+
+
+
+
+#closebtn {display: none;}
+  
+   /*MENU COM FORMATO APÓS 1080PX*/
+  
+.menu {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+
+  .menu li {
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  .menu li a {
+      padding: 7px 15px;
+      margin: 20px;
+  }
+  
+  .menu a {
+    font-family: var(--fonte_secundaria);
+    font-weight: 530;
+    color: rgb(249, 249, 250);
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-shadow: 1px 2px black;
+  }
+  
+  .menu li a:hover {
+    color: var(--hover);
+    text-shadow: 1px 2px rgb(4, 4, 4);
+  }
+  a:active {
+  transform: translateY(1.5px);
+  }
+  
+  .dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background: var(--bkg1);
+    min-width: 300px;
+    margin-top: 300px;
+    z-index: 1;
+    border-radius: 5px;
+  }
+
+  #drop-cont {margin-top: 200px;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content a {
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    display: block;
+  }*/
+  #logo a:active {
+      transform: translateY(1.5px);
+      }
+  
+  #logo a {
+      font-size: 0;
+  }
+
+  @media (max-width: 879px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ul { /*quem deve receber as alterações é o ul, não o menu*/
+        list-style-type: none;
+        align-items: center;
+      }
+
+    .logotipo {
+        width: 25%;
+        height: 70px;
+    }
+
+    .hamburger span, #closebtn {
+        font-size: 36px;
+        display: block;
+        cursor: pointer;
+        color: #ffffff;
+    }
+
+    #closebtn {float: right;}
+    
+    #menu-body {
+        width: 100%;
+        margin-top: -65px;
+        float: right;
+        position: relative;
+        display: none; /* Oculto por padrão */
+        background-color: var(--bkg1); /* Certifique-se de ter a variável definida */
+      }
+
+    .menu li {display: block; width: 100%; padding: 10px;}
+
+    .menu a {
+        font-family: var(--fonte_secundaria);
+        font-weight: 530;
+        color: var(--menutxt);
+        font-size: 90%;
+        letter-spacing: 2px;
+    }
+
+    .menu li a:hover {
+        color: var(--hover);
+        text-shadow: 1px 2px rgb(4, 4, 4);
+    }
+
+    a:active {
+        transform: translateY(1.5px);
+    }
+
+    .dropdown {
+        display: inline-block;
+        position: relative;
+    }
+
+    .content {
+        display: none;
+        position: absolute;
+        background: rgba(76, 88, 130, 0.5);
+        min-width: 500px;
+        margin-top: 170px;
+        z-index: 1;
+        border-radius: 5px;
+    }
+
+    .dropdown:hover .content {
+        display: block;
+    }
+
+    .content a {
+        display: block;
+    }
+
+    .content a:hover {
+        display: block;
+    }
+
+}
+  @media (min-width: 880px) and (max-width: 1080px) {
+    header {
+        flex-flow: column wrap;
+        justify-content: flex-start;
+    }
+        
+    .menu {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center
+    }
+
+    .menu li {
+        justify-content: center;}
+     
+    .menu li a {
+        padding: 2px 1px;
+        font-size: 20px;
+    }
+
+    .menu li a {
+        font-family: var(--fonte_secundaria);
+        font-weight: 530;
+        color: var(--menutxt);
+        letter-spacing: 2px;
+    }
+
+    .menu li a:hover {
+    color: var(--hover);
+    text-shadow: 1px 2px rgb(4, 4, 4);
+    }
+    a:active {
+    transform: translateY(1.5px);
+    }
+
+    .dropdown {
+    display: inline-block;
+    position: relative;
+    }
+
+    .content {
+    display: none;
+    position: absolute;
+    background: rgba(76, 88, 130, 0.5);
+    min-width: 500px;
+    margin-top: 170px;
+    z-index: 1;
+    border-radius: 5px;
+    }
+
+    .dropdown:active .content {
+    display: block;
+    }
+
+    .content a {
+    display: block;
+    }
+
+    .content a:hover {
+    display: block;
+    }
+}

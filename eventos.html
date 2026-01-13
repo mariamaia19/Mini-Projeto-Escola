@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html  lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="menu.css">
+  	<link rel="stylesheet" href="body.css">
+	<link rel="stylesheet" href="footer.css">
+	<link rel="stylesheet" href="">
+	<link rel="preconnect" href="https://fonts.googleapis.com"> <!--GOOGLE FONTS POPPINS-->
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> <!--GOOGLE FONTS-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--GOOGLE FONTS JERSEY-->
+	<link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sedan+SC&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="img/Imagem1.png">
+	<title>Eventos - Instituto Gnosis BRASIL</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+  />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"><!--INCORPORAÇÃO DE BOOTSTRAP-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+	<header>
+		<div class="logotipo" id="gnosis">
+			<a href="index.html"><img src="img/imagotipo png transparente.png" alt="logotipo do Instituto Gnosis Brasil" style="height: 70px;"></a> <!--para adicionar link na imagem, coloque a imagem dentro da tag a-->
+		</div>
+		<nav>
+			<div class="menu" id="menu-body">
+                <span class="material-symbols-outlined" onclick="closemenu()" id="closebtn">
+                    close
+                </span>
+				<ul>
+					<li><a class="a-style" href="index.html">Início</a></li>
+					<li class="dropdown">
+            <a class="a-style">Cursos e Eventos▾</a>
+            <ul>
+              <div class="dropdown-content" id="drop-cont">
+                <li><a class="a-style" href="#">Cursos▸</a></li>
+                <li><a class="a-style" href="eventos.html">Eventos▸</a></li>
+                <li><a class="a-style" href="programacao.html">Programação▸</a></li>
+              </div>	
+            </ul>
+          </li>
+					<li class="dropdown"> <!--A classe vem no li ou na div??-->
+							<a class="a-style" href="#" onclick="showdropdown()">Quem Somos▾</a> <!--tem que ter dropdown-->
+								<ul>
+									<div class="dropdown-content" id="drop_cont2">
+										<li><a class="a-style" href="quemsomos.html">A Instituição Gnosis Brasil ▸</a></li>
+										<li><a class="a-style" href="contato.html">Contato ▸</a></li>
+									</div>	
+								</ul>
+					<li><a class="a-style" href="location.html">Visite-nos</a></li>
+				</ul>
+			</div>
+		</nav>
+        <div class="hamburger" onclick="showmenu()" id="hamburguer"><span class="material-symbols-outlined">
+            menu
+            </span>
+        </div>
+            
+	</header>
+	<div class="heroimg_lp">
+		<div class="hero_text1">
+			<p>CAFÉ COLONIAL JUNINO</p>
+			<p>PALESTRA</p>
+			<img src="img/Imagem1(3).png" style="width: 700px; height: 300px;">
+			<p>DA FESTA JUNINA </p>
+				<a id="button1" class="a-style" href="#">Confira a programação</a>
+		</div>
+	</div>
+	<div class="container" style="margin-top: 10%; margin-bottom: 5%;">
+		<h2>Obrigado por participar do nosso Evento!</h2>
+	</div>
+	<div class="container d-lg-flex justify-content-around align-items-center" style="margin-bottom: 10%;">
+		<p class="container-content"> Foi graças a vocês que pudemos realizar este evento tão mágico! Foi uma manhã/tarde repleta de ensinamentos, prática e integração onde pudemos também desfrutar de uma boa música  instrumental e comidas típicas deliciosas</p>
+		<img class="imagens" src="img/Imagem do WhatsApp de 2024-06-15 à(s) 09.42.13_73145b31.jpg">
+	</div>
+	<div class="container d-lg-flex justify-content-around align-items-center">
+		<img class="imagens" src="img/Imagem do WhatsApp de 2024-06-15 à(s) 09.16.42_2004a34d.jpg">
+		<p class="container-content">Além disso tivemos o nosso maravilhoso brechó que contou com a venda de diversos itens como acessórios, sapatos, roupas e livros com intuito inteiramente BENEFICENTE</p>
+	</div>
+	<div class="container" style="margin-top: 15%; margin-bottom: 15%;">
+		<p  style="text-align: center;">Agradecemos de coração a presenca de vocês</p>
+		<h2>Até o Próximo Evento!</h2> 
+	</div>	
+		<!--sempre se atente a fechar todas as tags para não gerar erros no código-->
+	<section class="fotos mx-auto" style="margin-top: 15%; margin-bottom: 10%;">
+		<p style="text-align: center;">Confira a nossa</p>
+		<h2 style="font-size: 60px; color: white; text-align: center; margin-bottom: 3%;">GALERIA DE FOTOS</h2>
+		</div>
+		<div id="demo" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+			<!-- Indicadores do carrossel -->
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+				<button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+				<button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+				<button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+				<button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+			</div>
+			
+			<!-- Itens do carrossel -->
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="img/Imagem do WhatsApp de 2024-06-15 à(s) 09.16.42_2004a34d.jpg" style="height: 350px;" class="d-block mx-auto w-50">
+				</div>
+				<div class="carousel-item">
+					<img src="img/Imagem do WhatsApp de 2024-06-15 à(s) 12.43.41_ac90770b.jpg" style="height: 400px; width: 300px;" class="d-block mx-auto">
+				</div>
+				<div class="carousel-item">
+					<img src="img/Imagem do WhatsApp de 2024-06-15 à(s) 09.42.13_73145b31.jpg" style="height: 350px;" class="d-block mx-auto w-50">
+				</div>
+				<div class="carousel-item">
+					<img src="img/Imagem do WhatsApp de 2024-06-15 à(s) 10.55.01_150bdfed.jpg" style="height: 350px;" class="d-block mx-auto w-50">
+				</div>
+				<div class="carousel-item">
+					<img src="img/Imagem do WhatsApp de 2024-06-15 à(s) 10.54.47_dde27eab.jpg" style="height: 350px;" class="d-block mx-auto w-50">
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				  </button>
+				  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				  </button>
+			</div>
+		</div>
+		</section>
+		<div class="container" style="height: 50vh; margin-top: 10%;">
+			<p style="text-align: center;">Siga as nossas redes sociais e</p>
+			<h2>Acompanhe os próximos eventos</h2>
+		</div>
+		<footer>
+			<div>
+			   <a href="index.html">
+					<img src="img/imagotipo png transparente.png" style="height: 80px;" alt="logo de rodapé do Instituto Gnosis">
+			   </a>
+			</div>
+			<div class="container-footer">
+				<div class="rodape-info">
+					<h3 class="h3_rodape">Eventos</h3>
+					<a class="a-style"  href="#">Palestras Públicas</a>
+					<a class="a-style"  href="#">Cursos</a>
+				</div>
+				<div class="rodape-info">
+					<h3 class="h3_rodape">Fale Conosco</h3>
+					<a class="a-style" href="https://w.app/gnosisbrasilsalvador" target="_blank">Whatsapp</a>
+					<a class="a-style"  href="#">E-mail</a>
+					<a class="a-style"  href="https://www.instagram.com/gnosisbrasil.salvador?igshid=MzRlODBiNWFlZA%3D%3D" target="_blank">Instagram</a>
+				</div>
+				<div class="rodape-info">
+					<h3 class="h3_rodape">Sobre e Termos</h3>
+					<a class="a-style"  href="quemsomos.html">Quem Somos</a>
+					<a class="a-style" href="#">Links de Referência</a>
+				</div>
+			</div>
+			<div id="nota">
+				<h4>Gnosis Brasil. Todos os direitos reservados©.</h4>
+			</div>
+		</footer>
+		<a class="whats-button" href="https://wa.me/5571993364527?text=Gostaria+de+me+inscrever+no+Evento%21" target="_blank"><img src="img/10464266.png"></a>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

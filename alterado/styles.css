@@ -1,0 +1,1367 @@
+/*======DEFININDO RESET DA PÁGINA=========
+Estes padrões aqui estão sendo aplicados para DESKTOP:*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+@font-face {
+    font-family: 'rustling_treesregular';
+    src: url('webfontkit-20240527-124332/rustling-trees-regular_-_copia-webfont.woff2') format('woff2'),
+         url('webfontkit-20240527-124332/rustling-trees-regular_-_copia-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'latomedium';
+    src: url('lato-mediun-webfont.woff2') format('woff2'),
+         url('lato-mediun-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+  --bkg1: rgb(12,52,84);
+	--hover:  #e6e609;
+  --menutxt: white;
+  --shad: rgb(52, 52, 52);
+  --footer: #e6e609;
+  --fonte_principal: 'rustling_treesregular';
+  --fonte_secundaria: 'latomedium', sans-serif;
+  --fonte_terciaria: "Constantia";
+}
+
+ul { /*quem deve receber as alterações é o ul, não o menu*/
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+	background-color: rgba(219, 213, 213, 0.2);
+	background-image: url(img/particle-burst-golden-sparkle-shimmer-background-illustration.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+h2 {
+	font-family: var(--fonte_secundaria);
+	font-size: 70px;
+	color: var(--menutxt);
+}
+
+h3 {
+	font-family: var(--fonte_principal);
+	font-size: 50px;
+	font-weight: 400;
+	font-style: bold;
+	color: var(--menutxt);
+}
+
+h2:hover {
+	color: #edce00;
+}
+
+a { text-decoration: none; 
+  color: black;
+  cursor: pointer;
+}
+
+p {
+	font-family: var(--fonte_terciaria);
+	letter-spacing: 5px;
+	font-size: 30px;
+	color: var(--menutxt);
+	text-shadow: 2px 3px 10px rgb(23, 161, 155);
+}
+
+/*=========== CONSTRUÇÃO DO MENU DROPDOWN =============*/
+/*========= OS ELEMENTOS QUE SÃO DO TIPO BLOCK COMO LI E DIV DEVEM RECEBER DISPLAY FLEX=========*/
+header {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+	background-color: var(--bkg1);
+	height: 15vh;
+}
+
+.logotipo {
+	width: 25%;
+	height: 70px;
+}
+
+
+.date {
+	border: 1px solid var(--hover);
+	width: 300px;
+	height: 50px;
+}
+
+.date p {
+	color: white;
+}
+
+.hamburguer {
+	display: none;
+	border: none;
+	background: none;
+	border-top: 3px solid white;
+	cursor: pointer;
+}
+
+.hamburguer::before, .hamburguer::after {
+	content: " ";
+	display: block;
+	width: 30px;
+	height: 3px;
+	margin-top: 5px;
+	background: white;
+}
+
+.menu {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.menu li {
+	justify-content: center;
+}
+
+.menu li a {
+	padding: 10px 20px;
+	margin: 20px;
+}
+
+.menu a {
+  font-family: var(--fonte_secundaria);
+  font-weight: 530;
+	color: var(--menutxt);
+	font-size: 22px;
+	letter-spacing: 2px;
+}
+
+.menu li a:hover {
+  color: var(--hover);
+  text-shadow: 1px 2px rgb(4, 4, 4);
+}
+a:active {
+transform: translateY(1.5px);
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.content {
+  display: none;
+  position: absolute;
+  background: rgba(76, 88, 130, 0.5);
+  min-width: 500px;
+  margin-top: 170px;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown:hover .content {
+  display: block;
+}
+
+.content a {
+  display: block;
+}
+
+.content a:hover {
+  display: block;
+}
+
+#txtBusca{
+  float:left;
+  background-color:transparent;
+  padding-left:5px;
+  font-style:italic;
+  font-size:18px;
+  border:none;
+  height:32px;
+  width:260px;
+}
+.text a {
+	font-size: 0px;
+}
+
+#logo a:active {
+	transform: translateY(1.5px);
+	}
+
+#logo a {
+	font-size: 0;
+}
+/*========== FIM DO NAVBAR ==========*/
+/*================== INICIO DO CONTEÚDO ==================*/
+
+.hero_image1 {
+	background: linear-gradient(to right, rgb(1, 1, 1), rgba(46, 31, 2, 0.2)), url(img/fogueira-ia.jpeg) no-repeat center center;
+	background-size: cover;
+	background-position-x: right;
+	height: 130vh;
+	display: flex;
+	justify-content:left;
+	align-items:center;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.hero_image1::before {
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+}
+.hero_text1 {
+	text-align: center;
+}
+
+.hero_text1 p {
+	color: var(--menutxt);
+	margin-top: 2%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+#button1 {
+	display: inline-block;
+	margin-top: 8%;
+	text-align: center;
+	font-family: var(--fonte_terciaria);
+	font-weight: 650;
+	background-color: var(--hover);
+	font-size: 22px;
+	padding: 18px;
+	text-transform: uppercase;
+	border-radius: 10px;
+	box-shadow: 0 3px 5px grey;
+}
+
+#button1:hover {
+	color: var(--menutxt);
+	text-shadow: 1px 1px rgb(74, 74, 74);
+}
+
+.hero_image2 {
+	width: 100%;
+	background: linear-gradient(to right, rgb(1, 1, 1), rgba(46, 31, 2, 0.2)), url(img/close-up-person-using-mobile-phone.jpg) no-repeat center center;
+	background-size: cover;
+	background-position-x: right;
+	height: 70vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.hero_image2 p {
+	width: 100%;
+	text-align: center;
+}
+
+.hero_image2 h2 {
+	text-shadow: 3px 3px 10px black;
+}
+
+.hero_image3 {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	text-align: justify;
+	border: 2px solid var(--menutxt);
+	height: 100vh;
+	width: 100%;
+}
+.hero_content3 p {
+	font-size: 22px;
+}
+
+.hero_content3 h3 {
+	font-family: var(--fonte_secundaria);
+
+}
+
+.hero_image5 {
+	width: 100%;
+	background: linear-gradient(to right, rgb(87, 86, 86), rgba(46, 31, 2, 0.2)), url(img/WhatsApp\ Image\ 2024-05-28\ at\ 10.25.41.jpeg) no-repeat center center;
+	background-size: cover;
+	background-position-x: right;
+	height: 60vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.hero_image5 p {
+	width: 100%;
+	text-align: center;
+}
+
+.hero_image5 h2 {
+	text-shadow: 3px 3px 10px black;
+}
+
+.localizacao img {
+	width: 40%;
+	height: 100vh;
+}
+.localizacao p {
+	width: 50%;
+	text-align: left;
+}
+
+.localizacao h3 {
+	text-align: center;
+}
+
+.maps {
+	border-radius: 5px;
+	font-family: var(--fonte_terciaria);
+	font-weight: 650;
+	background-color: var(--hover);
+	font-size: 22px;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	border-radius: 10px;
+	box-shadow: 0 3px 5px grey;
+	cursor: pointer;
+}	
+
+.localizacao {
+	text-align: center;
+	margin-top: 12%;
+	height: 150vh;
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+:where(.localizacao) h3{
+	font-family: var(--fonte_secundaria) !important;
+}
+
+.programacao {
+	text-align: center;
+	margin-top: 5%;
+	height: 130vh;
+	width: 100%;
+}
+
+.localizacao h3{
+	font-family: var(--fonte_principal);
+	color: #ffffff;
+	font-size: 50px;
+}
+
+.contato {
+	margin: 5%;
+	height: 80vh;
+	width: 100%;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#button {
+	display: block;
+	margin-top: 5%;
+	margin-left: 35%;
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 10px;
+	font-family: var(--fonte_principal);
+	color: var(--menutxt);
+	background-color: black;
+}
+
+.formtag {
+	color: var(--bkg1);
+	font-weight: 500;
+	font-family: var(--fonte_secundaria);
+	font-size: 20px;
+	display: block;
+}
+
+/*================= FIM DO HEADER E INÍCIO DAS SEÇÕES =================*/
+
+
+.banner {
+	width: 100%;
+	margin-bottom: 2%;
+	min-height: 60vh;
+	color: var(--menutxt);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.banner p {
+	font-size: 25px;
+	margin-top: 3%;
+}
+
+.banner h2 {
+	font-family: var(--fonte_terciaria);
+	font-size: 75px;
+	font-weight: 400;
+	font-style: bold;
+	text-shadow: 2px 2px var(--shad);
+}
+/* SESSÃO DE SERVIÇOS E POLAROID */
+.servicos {
+	margin: 2%;
+}
+
+.servicos img {
+	height: 50vh; width: 23%;
+}
+
+.card_left {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.card_right {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+	align-items: center;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.card_right img, .card_left img {
+	border: 2px solid rgb(76, 75, 75);
+	border-radius: 2%;
+}
+
+#c1, #c3 {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+#c2, #c4 {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.polaroid_card {
+	background-color: var(--menutxt);
+	align-content: center;
+	border-radius: 10px;
+	width: 60%;
+	height: 30vh;
+	box-shadow: 0 2px 10px 0 var(--bkg1), 0 2px 10px 0 var(--bkg1);
+	font-size: 30px;
+	font-family: var(--fonte_principal);
+	text-align: center;
+}
+
+:where(.polaroid_card h3){
+	font-size: 40px !important;
+	color: black !important;
+}
+
+:where(.polaroid_card p){
+	font-size: 25px !important;
+	font-weight: 520;
+	color: black !important;
+	text-shadow: none !important;
+}
+
+/* =======POLAROID DA ÁREA DE CONTATO======== */
+.boxvinte {
+	margin-top: 8%;
+}
+
+.boxvinte h3 {
+	font-family: var(--fonte_secundaria);
+}
+
+.contato_content {
+	margin-top: 5%;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	height: 80vh;
+}
+
+.card {
+	width: 30%;
+	margin: 2%;
+}
+
+.card img {  /*AQUI ESTAMOS DEFININDO UMA IMAGEM CENTRALIZADA EM UM CARD COM DISPLAY FLEX. A IMG É NATURALMENTE INLIE, ENTÃO CONVERTEMOS EM BLOCK*/
+	display: block;
+	margin: auto;
+}
+
+.polaroid_card_2 {
+	background-color: var(--menutxt);
+	height: 18vh;
+	box-shadow: 0 2px 10px 0 var(--bkg1), 0 2px 10px 0 var(--bkg1);
+	font-size: 25px;
+	font-family: var(--fonte_secundaria);
+	align-content: center;
+	text-align: center;
+}
+
+:where(.polaroid_card_2 h3){
+	font-size: 30px !important;
+}
+
+.button_contato {
+	border-radius: 5px;
+	font-family: var(--fonte_secundaria);
+	text-shadow: #131313;
+	font-size: 22px;
+	align-content: center;
+	padding: 5px 20px;
+	background-color: var(--hover);
+	cursor: pointer;
+}
+
+/* RESTANTE DO CÓDIGO */
+
+.button2 {
+	margin-top: 2%;
+	border-radius: 5px;
+	font-family: var(--fonte_terciaria);
+	text-shadow: #131313;
+	font-size: 22px;
+	padding: 5px 20px;
+	background-color: var(--hover);
+	cursor: pointer;
+}
+
+.button2:hover {
+	color: var(--menutxt);
+	text-shadow: 1px 2px #131313;
+}
+
+.button2:active {
+	transform: translateY(1.5px);
+	}
+
+
+.new_journey {
+	margin-top: 8%;
+	color: var(--menutxt);
+	text-align: center;
+	height: 70vh;
+}
+
+.start {
+	margin-top: 5%;
+	border: 2px outset;
+	border-radius: 8px;
+	padding: 20px 25px;
+	background-color: var(--hover);
+	font-family: var(--fonte_terciaria);
+	color: black;
+	font-size: 30px;
+	font-weight: 550;
+	box-shadow: 0 8px 1px 0 #2a2a2a;
+	cursor: pointer;
+}
+
+.start:hover {
+	color: var(--menutxt);
+	text-shadow: 1px 2px #3d3d3d;
+}
+.new_journey h2 {
+	margin-top: 2%;
+}
+
+.new_journey p {
+	margin-top: 3%;
+}
+
+.start:active {
+	box-shadow: 0 5px #2a2a2a;
+  transform: translateY(4px);
+}
+
+
+.click {
+	background-color: var(--hover);
+	border-radius: 7px;
+	padding: 7px 40px;
+	box-shadow: 2px 2px 7px rgb(195, 193, 193);
+}
+
+.localizacao p{
+	color: var(--menutxt);
+}
+
+/*============= CONSTRUÇÃO DO RODAPÉ ===========*/
+footer {
+	border-top: 1px solid black;
+	background-color: var(--bkg1);
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-between;
+	/* PARA QUE CADA ITEM DO FOOTER POSSA ESTAR BEM ENCAIXADO EM SUAS POSIÇÕES, COLOQUEI O DISPLAY FLEX E DEPOIS AJUSTEI PARA A DIREÇÃO DE COLUNA, POIS O LOGO FICA EMCIMA DOS CONTEÚDOS E OS CONTEÚDOS DE RODAPÉ NO MEIO E A VERSÃO DE COPYRIGHTING NO FINALX E O JUSTIFY-CONTENT COMO SPACE-BETWEEN PARA QUE TODOS OS CONTEÚDOS FIQUEM DISPOSTOS COLADOS NA DIV-PAI */
+	height: 80vh;
+	width: 100%;
+}
+
+#logotipo {
+	font-size: 30px;
+}
+
+/*====== AO INVES DE COLOCAR UMA FLEX, EXPERIMENTAR UMA GRID ======*/
+.container-footer {
+	height: 30vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-content: center;
+}
+
+.rodape-info {
+	height: auto;
+	width: 20%;
+	text-align: center;
+}
+
+.rodape-info a {
+	margin-top: 5%;
+	display: block;
+	font-family: "Roboto", sans-serif;
+	color: var(--menutxt);
+	font-size: 18px;
+}
+
+.rodape-info a:hover {
+	text-shadow: 2px 2px var(--shad);
+}
+
+.rodape-info h3 {
+	font-family: "Jersey 25", sans-serif;
+	font-size: 30px;
+	color: var(--menutxt);
+	text-shadow: 2px 2px var(--shad);
+}
+
+#nota {
+	margin-top: 5%;
+	font-size: 15px;
+	color: white !important;
+}
+
+
+/* ======CONSTRUÇÃO DE MEDIA QUERY====== */
+/* ===MEDIA QUERY DO MENU=== */
+@media (max-width: 576px) {
+	header {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	ul { /*quem deve receber as alterações é o ul, não o menu*/
+		list-style-type: none;
+		display: block;
+		align-items: center;
+	  }
+
+	h2 {
+		font-family: var(--fonte_secundaria);
+		font-size: 40px;
+		color: var(--menutxt);
+	}
+
+	h3 {
+		font-family: var(--fonte_principal);
+		font-size: 20px;
+		font-weight: 400;
+		font-style: bold;
+		color: var(--menutxt);
+	}
+	p {
+		font-size: 20px;
+	}
+
+	a {font-size: 10px;}
+
+	
+	.logotipo {
+		width: 25%;
+		height: 70px;
+	}
+
+
+	.date {
+		border: 1px solid var(--hover);
+		width: 300px;
+		height: 50px;
+	}
+
+	.date p {
+		color: white;
+	}
+
+	.hamburguer {
+		display: block;
+	}
+
+	.menu {
+		border: 2px solid white;
+		width: 100vw;
+		position: relative;
+		display: none; /* Oculto por padrão */
+		flex-direction: column;
+		justify-content: space-between;
+		background-color: var(--bkg1); /* Certifique-se de ter a variável definida */
+	  }
+
+	.menu li {
+		justify-content: center;
+		padding: 10px;
+	}
+
+	.menu li a {
+		padding: 10px 20px;
+	}
+
+	.menu a {
+		font-family: var(--fonte_secundaria);
+		font-weight: 530;
+		color: var(--menutxt);
+		font-size: 22px;
+		letter-spacing: 2px;
+	}
+
+	.menu li a:hover {
+		color: var(--hover);
+		text-shadow: 1px 2px rgb(4, 4, 4);
+	}
+
+	a:active {
+		transform: translateY(1.5px);
+	}
+
+	.dropdown {
+		display: inline-block;
+		position: relative;
+	}
+
+	.content {
+		display: none;
+		position: absolute;
+		background: rgba(76, 88, 130, 0.5);
+		min-width: 500px;
+		margin-top: 170px;
+		z-index: 1;
+		border-radius: 5px;
+	}
+
+	.dropdown:hover .content {
+		display: block;
+	}
+
+	.content a {
+		display: block;
+	}
+
+	.content a:hover {
+		display: block;
+	}
+
+	/* CONTEUDO PARA MOBILE - INDEX */
+	/* TOPO - HERO IMAGE 1 BANNER E BOTÕES */
+	.hero_image1 {
+		background: linear-gradient(to right, rgb(1, 1, 1), rgba(46, 31, 2, 0.2)), url(img/fogueira-ia.jpeg) no-repeat center center;
+		background-size: cover;
+		background-position-x: right;
+		height: 80vh;
+		display: block;
+		justify-content:left;
+		box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	}
+
+	.hero_image1::before {
+		background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+	}
+	.hero_text1 {
+		text-align: center;
+	}
+
+	.hero_text1 h2 {
+		font-size: 50px;
+	}
+
+	.hero_text1 p {
+		color: var(--menutxt);
+		margin-top: 2%;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
+	#button1 {
+		display: inline-block;
+		margin-top: 8%;
+		text-align: center;
+		font-family: var(--fonte_terciaria);
+		font-weight: 550;
+		background-color: var(--hover);
+		font-size: 20px;
+		padding: 18px;
+		text-transform: uppercase;
+		border-radius: 10px;
+		box-shadow: 0 3px 5px grey;
+	}
+
+	#button1:hover {
+		color: var(--menutxt);
+		text-shadow: 1px 1px rgb(74, 74, 74);
+	}
+
+	.banner {
+		width: 100%;
+		margin: 0;
+		min-height: 40vh;
+		text-align: center;
+		color: var(--menutxt);
+		box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	}
+	
+	.banner p {
+		margin-top: 10%;
+		font-size: 25px;
+	}
+	
+	.banner h2 {
+		font-family: var(--fonte_terciaria);
+		margin-top: 2%;
+		font-size: 50px;
+		font-weight: 400;
+		font-style: bold;
+		text-shadow: 2px 2px var(--shad);
+	}
+	/* SESSÃO DE SERVIÇOS E POLAROID */
+	.servicos {
+		display: flex;
+		justify-content: center; /* Centraliza horizontalmente */
+		align-items: center; /* Centraliza verticalmente, se necessário */
+		flex-wrap: wrap; /* Permite que os itens quebrem linha, se necessário */
+		text-align: center;
+	}
+
+	.servicos img {
+		height: 30vh; width: 81%;
+		border-radius: 0;
+		margin: auto;
+	}
+	
+	.card_left, .card_right {
+		box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+		margin: 2%;
+	}
+	
+	.polaroid_card {
+		width: 80%;
+		margin: 0 auto;
+		background-color: var(--menutxt);
+		height: 18vh;
+		box-shadow: 0 2px 10px 0 var(--bkg1), 0 2px 10px 0 var(--bkg1);
+		font-size: 30px;
+		font-family: var(--fonte_principal);
+		text-align: center;
+		border-radius: 0;
+	}
+	
+	:where(.polaroid_card h3){
+		font-size: 30px !important;
+		color: black !important;
+	}
+	
+	:where(.polaroid_card p){
+		font-size: 0!important;
+		font-weight: 520;
+		color: black !important;
+		text-shadow: none !important;
+	}
+
+	/* =====PAGINA DE CONTATO===== */
+
+	.hero_image2 {
+		width: 100%;
+		background: linear-gradient(to right, rgb(1, 1, 1), rgba(46, 31, 2, 0.2)), url(img/close-up-person-using-mobile-phone.jpg) no-repeat center center;
+		background-size: cover;
+		background-position-x: right;
+		height: 60vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	}
+
+	.hero_image2 p {
+		width: 100%;
+		text-align: center;
+	}
+
+	.hero_image2 h2 {
+		text-shadow: 3px 3px 10px black;
+	}
+
+	/* =======POLAROID DA ÁREA DE CONTATO======== */
+	.boxvinte {
+		margin-top: 8%;
+	}
+	
+	.boxvinte h3 {
+		font-family: var(--fonte_secundaria);
+		font-size: 50px;
+		margin-bottom: 10%;
+	}
+	
+	.contato_content {
+		margin: 0 auto;
+		display: inline-block;
+		padding: 5px;
+		width: 100%;
+		height: 80vh;
+	}
+	
+	.card {
+		width: 50%;
+		margin: 0 auto;
+	}
+	
+	.card img {  /*AQUI ESTAMOS DEFININDO UMA IMAGEM CENTRALIZADA EM UM CARD COM DISPLAY FLEX. A IMG É NATURALMENTE INLIE, ENTÃO CONVERTEMOS EM BLOCK*/
+		display: block;
+		margin: auto;
+	}
+
+	.polaroid_card_2 {
+		background-color: var(--menutxt);
+		margin-bottom: 10%;
+		height: 18vh;
+		box-shadow: 0 2px 10px 0 var(--bkg1), 0 2px 10px 0 var(--bkg1);
+		font-size: 25px;
+		font-family: var(--fonte_secundaria);
+		align-content: center;
+		text-align: center;
+	}
+	
+	:where(.polaroid_card_2 h3){
+		font-size: 30px !important;
+	}
+	
+	.button_contato {
+		border-radius: 5px;
+		font-family: var(--fonte_secundaria);
+		text-shadow: #131313;
+		font-size: 22px;
+		align-content: center;
+		padding: 5px 20px;
+		background-color: var(--hover);
+		cursor: pointer;
+	}
+
+	.hero_image3 {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		text-align: justify;
+		border: 2px solid var(--menutxt);
+		height: 100vh;
+		width: 100%;
+	}
+	.hero_content3 p {
+		font-size: 22px;
+	}
+
+	.hero_content3 h3 {
+		font-family: var(--fonte_secundaria);
+
+	}
+
+	/* LOCALIZAÇÃO */
+
+	.hero_image5 {
+		width: 100%;
+		background: linear-gradient(to right, rgb(87, 86, 86), rgba(46, 31, 2, 0.2)), url(WhatsApp\ Image\ 2024-05-28\ at\ 10.25.41.jpeg) no-repeat center center;
+		background-size: cover;
+		background-position-x: right;
+		height: 60vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	}
+
+	.hero_image5 p {
+		width: 100%;
+		text-align: center;
+	}
+
+	.hero_image5 h2 {
+		text-shadow: 3px 3px 10px black;
+	}
+	
+	.localizacao img {
+		width: 40%;
+		height: 50vh;
+	}
+	.localizacao p {
+		width: 50%;
+		text-align: left;
+	}
+
+	.localizacao h3 {
+		text-align: center;
+	}
+
+	.maps {
+		border-radius: 5px;
+		font-family: var(--fonte_terciaria);
+		font-weight: 650;
+		background-color: var(--hover);
+		font-size: 22px;
+		padding: 10px 20px;
+		text-transform: uppercase;
+		border-radius: 10px;
+		box-shadow: 0 3px 5px grey;
+		cursor: pointer;
+	}	
+
+	.localizacao {
+		text-align: center;
+		margin-top: 12%;
+		height: 70vh;
+		width: 100%;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+	}
+
+	:where(.localizacao) h3{
+		font-family: var(--fonte_secundaria) !important;
+	}
+
+
+	.contato {
+		margin: 5%;
+		height: 80vh;
+		width: 100%;
+		box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	}
+
+	#button {
+		display: block;
+		margin-top: 5%;
+		margin-left: 35%;
+		border: 2px solid black;
+		border-radius: 5px;
+		padding: 10px;
+		font-family: var(--fonte_principal);
+		color: var(--menutxt);
+		background-color: black;
+	}
+
+	.formtag {
+		color: var(--bkg1);
+		font-weight: 500;
+		font-family: var(--fonte_secundaria);
+		font-size: 20px;
+		display: block;
+	}
+	
+	/* RESTANTE DO CÓDIGO */
+	
+	.button2 {
+		margin-top: 2%;
+		border-radius: 5px;
+		font-family: var(--fonte_terciaria);
+		text-shadow: #131313;
+		font-size: 22px;
+		padding: 5px 20px;
+		background-color: var(--hover);
+		cursor: pointer;
+	}
+	
+	.button2:hover {
+		color: var(--menutxt);
+		text-shadow: 1px 2px #131313;
+	}
+	
+	.button2:active {
+		transform: translateY(1.5px);
+		}
+	
+	
+	.new_journey {
+		margin-top: 20%;
+		color: var(--menutxt);
+		text-align: center;
+		height: 40vh;
+	}
+	
+	.start {
+		margin-top: 5%;
+		border: 2px outset;
+		border-radius: 8px;
+		padding: 15px 20px;
+		background-color: var(--hover);
+		font-family: var(--fonte_terciaria);
+		color: black;
+		font-size: 20px;
+		font-weight: 550;
+		box-shadow: 0 8px 1px 0 #2a2a2a;
+		cursor: pointer;
+	}
+	
+	.start:hover {
+		color: var(--menutxt);
+		text-shadow: 1px 2px #3d3d3d;
+	}
+	.new_journey h2 {
+		margin-top: 2%;
+	}
+	
+	.new_journey p {
+		margin-top: 3%;
+	}
+	
+	.start:active {
+		box-shadow: 0 5px #2a2a2a;
+	  transform: translateY(4px);
+	}
+	
+	.localizacao {
+		text-align: center;
+		height: 120vh;
+		width: 100%;
+	}
+	
+	:where(.localizacao) h3{
+		font-family: var(--fonte_secundaria) !important;
+		font-size: 30px !important;
+		margin-bottom: 5%;
+	}
+
+	/* ====PÁGINA DE PROGRAMAÇÃO==== */
+	
+	.programacao {
+		text-align: center;
+		margin-top: 5%;
+		height: 80vh;
+		width: 100%;
+	}
+
+	.programacao h3 {
+		font-size: 50px;
+	}
+
+	.conteudoprogramatico {
+		margin: 2%;
+	}
+
+	.conteudoprogramatico p {
+		font-size: 25px;
+		text-align: left;
+	}
+	
+	.localizacao h3{
+		font-family: var(--fonte_principal);
+		color: #ffffff;
+		font-size: 20px;
+	}
+	
+	.click {
+		background-color: var(--hover);
+		border-radius: 7px;
+		padding: 7px 40px;
+		box-shadow: 2px 2px 7px rgb(195, 193, 193);
+	}
+	
+	.localizacao p{
+		color: var(--menutxt);
+	}
+	
+	/*============= CONSTRUÇÃO DO RODAPÉ ===========*/
+	footer {
+		border-top: 1px solid black;
+		background-color: var(--bkg1);
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: space-between;
+		/* PARA QUE CADA ITEM DO FOOTER POSSA ESTAR BEM ENCAIXADO EM SUAS POSIÇÕES, COLOQUEI O DISPLAY FLEX E DEPOIS AJUSTEI PARA A DIREÇÃO DE COLUNA, POIS O LOGO FICA EMCIMA DOS CONTEÚDOS E OS CONTEÚDOS DE RODAPÉ NO MEIO E A VERSÃO DE COPYRIGHTING NO FINALX E O JUSTIFY-CONTENT COMO SPACE-BETWEEN PARA QUE TODOS OS CONTEÚDOS FIQUEM DISPOSTOS COLADOS NA DIV-PAI */
+		height: 80vh;
+		width: 100%;
+	}
+	
+	#logotipo {
+		font-size: 30px;
+	}
+	
+	/*====== AO INVES DE COLOCAR UMA FLEX, EXPERIMENTAR UMA GRID ======*/
+	.container-footer {
+		height: 30vh;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-content: center;
+	}
+	
+	.rodape-info {
+		height: auto;
+		width: 20%;
+		text-align: center;
+	}
+	
+	.rodape-info a {
+		margin-top: 5%;
+		display: block;
+		font-family: "Roboto", sans-serif;
+		color: var(--menutxt);
+		font-size: 18px;
+	}
+	
+	.rodape-info a:hover {
+		text-shadow: 2px 2px var(--shad);
+	}
+	
+	.rodape-info h3 {
+		font-family: "Jersey 25", sans-serif;
+		font-size: 30px;
+		color: var(--menutxt);
+		text-shadow: 2px 2px var(--shad);
+	}
+	
+	#nota {
+		margin-top: 5%;
+		font-size: 15px;
+		color: white !important;
+	}
+}
+
+/*MEDIA QUERY - MOBILE ATÉ 992px*/
+@media (min-width: 577px) and (max-width: 1080px) {
+	header {
+		flex-flow: column nowrap;
+		justify-content: flex-start;
+		height: 20vh;
+	}
+
+		
+	.menu {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	.menu li {
+		justify-content: center;
+	}
+
+	.menu li a {
+		padding: 10px 10px;
+		margin: 20px;
+	}
+
+	.menu a {
+	font-family: var(--fonte_secundaria);
+	font-weight: 530;
+		color: var(--menutxt);
+		font-size: 22px;
+		letter-spacing: 2px;
+	}
+
+	.menu li a:hover {
+	color: var(--hover);
+	text-shadow: 1px 2px rgb(4, 4, 4);
+	}
+	a:active {
+	transform: translateY(1.5px);
+	}
+
+	.dropdown {
+	display: inline-block;
+	position: relative;
+	}
+
+	.content {
+	display: none;
+	position: absolute;
+	background: rgba(76, 88, 130, 0.5);
+	min-width: 500px;
+	margin-top: 170px;
+	z-index: 1;
+	border-radius: 5px;
+	}
+
+	.dropdown:active .content {
+	display: block;
+	}
+
+	.content a {
+	display: block;
+	}
+
+	.content a:hover {
+	display: block;
+	}
+
+	h2 {
+		font-family: var(--fonte_secundaria);
+		font-size: 70px;
+		color: var(--menutxt);
+	}
+	
+	h3 {
+		font-family: var(--fonte_principal);
+		font-size: 50px;
+		font-weight: 400;
+		font-style: bold;
+		color: var(--menutxt);
+	}
+	
+	h2:hover {
+		color: #edce00;
+	}
+	
+	a { text-decoration: none; 
+	  color: black;
+	  cursor: pointer;
+	}
+	
+	p {
+		font-family: var(--fonte_terciaria);
+		letter-spacing: 5px;
+		font-size: 20px;
+		color: var(--menutxt);
+		text-shadow: 2px 3px 10px rgb(23, 161, 155);
+	}
+
+	.endereco p {
+		text-align: left;
+		margin: 5%;
+	}
+}	
+
+
+
+/* AQUI ENTRA OUTRAS PÁGINAS */
+
+
+/* ===MEDIA QUERY=== */

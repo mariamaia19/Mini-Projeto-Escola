@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html  lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="menu-dropdown.css">
+  	<link rel="stylesheet" href="body.css">
+	<link rel="stylesheet" href="teste.css">
+	<link rel="stylesheet" href="footer.css">
+	<link rel="stylesheet" href="">
+	<link rel="preconnect" href="https://fonts.googleapis.com"> <!--GOOGLE FONTS POPPINS-->
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> <!--GOOGLE FONTS-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--GOOGLE FONTS JERSEY-->
+	<link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sedan+SC&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="img/ChatGPT_Image_28_de_mai._de_2025__18_02_36-removebg-preview.png">
+	<title>Quem Somos - Escola Jacaré Feliz</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+  />
+   <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+/>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"><!--INCORPORAÇÃO DE BOOTSTRAP-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+	<header>
+		<div class="logotipo" id="escola">
+			<a href="index.html"><img src="ChatGPT_Image_28_de_mai._de_2025__18_02_36-removebg-preview.png" alt="logotipo da Escola Jacaré Feliz" style="height: 70px;"></a> <!--para adicionar link na imagem, coloque a imagem dentro da tag a-->
+		</div>
+    <!--<form>
+		  <input type="search" name="caixa-busca" placeholder="O que está buscando?" class="campo" size="25">
+		  <button type="button" class="botao botao-busca" name="buscar">Buscar</button>
+	  </form>-->
+		<nav>
+				<ul>
+					<li><a class="a-text" href="index.html">Início</a></li>
+					<li class="dropdown">
+            			<a class="a-text">A EJF▾</a>
+            				<ul>
+              					<div class="dropdown-content" id="drop-cont">
+                          <li><a class="a-text" href="quemsomos.html">Quem Somos</a></li>
+									        <li><a class="a-text2" href="#">Séries▸</a></li>
+									        <li><a class="a-text2" href="programacao.html">Eventos▸</a></li>
+									        <li class="sub-dropdown"><a class="a-text2" href="programacao.html">Institucional▸</a>
+										        <ul>
+											        <div class="dropdown-content2" id="drop_cont2">
+											          <li><a class="a-text2" href="loginaluno.html" target="_blank">Portal do Aluno</a></li>
+											          <li><a class="a-text2" href="#" target="_blank">Portal dos Pais</a></li>
+											          <li><a class="a-text2" href="#" target="_blank">Portal do Professor</a></li>
+                              </div>
+                            </ul>	
+                          </li>
+                        </div>	
+            				</ul>
+          			</li>
+					<li class="dropdown"> <!--A classe vem no li ou na div??-->
+							<a class="a-text" href="location.html" onclick="showdropdown()">Unidades▾</a> <!--tem que ter dropdown-->
+								<!--<ul>
+									<div class="dropdown-content">
+										<li><a class="a-text2" href="quemsomos.html">Encontre uma unidade </a></li>
+										<li><a class="a-text2" href="contato.html">Seja um franqueado ▸</a></li>
+									</div>	
+								</ul>-->
+					<li class="dropdown">
+						<a class="a-text" href=# onclick="showdropdown()">Contato▾</a>
+							<ul>
+									<div class="dropdown-content" id="drop_cont2">
+										<li><a class="a-text2" href="quemsomos.html">Fale Conosco▸</a></li>
+										<li><a class="a-text2" href="matriculas.html">Matrículas▸</a></li>
+										<li><a class="a-text2" href="contato.html">Trabalhe com a gente▸</a></li>
+									</div>	
+								</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>        
+	</header>
+  <main class="box-container">
+    <div class="box_one">
+			<h1>QUEM SOMOS</h1>
+			<p>Fundada em 2025 pela psicopedagoga Nakara Nao, a Escola Jacaré Feliz nasceu de um sonho simples, porém profundo: criar um espaço seguro, 
+        acolhedor e inspirador onde a infância pudesse ser vivida em sua plenitude. 
+        Um lugar em que cada bebê, a partir de um ano, e cada criança até o 5º ano do Ensino Fundamental pudesse explorar, descobrir, brincar e aprender, 
+        sem pressões desnecessárias, sem telas, e com toda a liberdade e encantamento que um ambiente verdadeiramente educativo deve proporcionar.</p>
+      <p>A Jacaré Feliz acredita que a escola é uma extensão da casa, do colo e do afeto. Para nós, a educação não é apenas o processo de adquirir conhecimentos, mas uma jornada de desenvolvimento integral, onde emoções, corpo, mente e relações se entrelaçam para formar uma criança segura, curiosa e consciente do seu papel no mundo.
+Aqui, cada aluno é visto como único, com tempo próprio de amadurecimento, potencialidades específicas e um universo inteiro prestes a florescer.</p>
+      </div>
+    <div class="box_two">
+      <img src="img/empresario-confiante-bonito.jpg">
+    </div>
+  </main>
+  <section class="propostas">
+		<div class="package-um">
+			<h1>Brincar para aprender</h1>
+			<p>Nossa proposta pedagógica tem como pilares o <b>ensino lúdico, sensorial</b> e <b>investigativo, totalmente</b><b>livre de telas</b>, 
+        para que as crianças se desenvolvam em contato com pessoas, materiais reais, natureza, movimento e experiências significativas. 
+        Acreditamos que <b>o brincar é a linguagem natural da infância</b>, e é por meio dele que o raciocínio, 
+        a <b>criatividade, a autonomia</b> e o <b>senso crítico</b> surgem de forma leve e espontânea.</p>
+		</div>
+		<img src="img/professor-de-tiro-medio-e-menino.jpg" id="img-um">
+	</section>
+<!--<section class="metodos">
+		<img style="height: 70%; width: 40%;" src="img/criancas-levantando-maos.jpg">
+		<div class="package-um">
+			<h1>Uma escola que respeita a infância</h1>
+			<h4>Ambientes planejados para estimular a curiosidade e o raciocínio e livres de telas até o 1º ano</h4>
+		</div>
+	</section>-->
+  <section class="proposta-pedagogica">
+      <h1>Proposta Pedagógica</h1>
+      <div class="card-container-pai">
+        <div class="card-proposta">
+          <img src="img/criancas-de-tiro-medio-brincando-com-pistola-d-agua.jpg" alt="" class="card-img">
+          <h3 class="card-title">Respeito à infância</h3>
+          <button class="card-button">Passe o mouse sobre o card</button>
+          <div class="card-descritivo">
+            <p>Na Jacaré Feliz, o aprendizado não é imposto: ele acontece. 
+              Com ambientes planejados para estimular a curiosidade e o raciocínio, convidamos as crianças a explorar materiais, 
+              interagir com colegas, criar hipóteses, experimentar soluções e expressar seus pensamentos — 
+              sempre com acompanhamento próximo de professores especialistas.</p>
+          </div>
+        </div>
+        
+        <div class="card-proposta">
+          <img src="img/criancas-de-tiro-medio-brincando-com-pistola-d-agua.jpg" alt="" class="card-img">
+          <h3 class="card-title">Ensino livre de telas</h3>
+          <button class="card-button">Passe o mouse sobre o card</button>
+          <div class="card-descritivo">
+            <p>Do Berçário I (a partir de 1 ano) ao 5º ano, nenhuma atividade depende de tablets, celulares ou computadores. 
+              Todos os conteúdos são vivenciados por meio de:
+                jogos pedagógicos,
+                atividades sensoriais,
+                projetos investigativos,
+                contato com a natureza,
+                expressão artística,
+                experiências práticas.
+              A ausência de telas permite que a criança desenvolva atenção plena, concentração, 
+              memória ativa, coordenação motora e vínculos reais com as pessoas à sua volta.</p>
+          </div>
+        </div>
+        <div class="card-proposta">
+          <img src="img/criancas-de-tiro-medio-brincando-com-pistola-d-agua.jpg" alt="" class="card-img">
+          <h3 class="card-title">Desenvolvimento integral</h3>
+          <button class="card-button">Passe o mouse sobre o card</button>
+          <div class="card-descritivo">
+            <p>Nosso currículo prioriza:
+                autonomia,
+                independência,
+                consciência emocional,
+                criatividade,
+                pensamento crítico,
+                responsabilidade ambiental e social.
+              A criança aprende desde cedo a argumentar, questionar, refletir, 
+              cuidar, conviver e agir, construindo uma relação saudável com o mundo.</p>
+          </div>
+        </div>
+        <div class="card-proposta">
+          <img src="img/criancas-de-tiro-medio-brincando-com-pistola-d-agua.jpg" alt="" class="card-img">
+          <h3 class="card-title">Educação por valores</h3>
+          <button class="card-button">Passe o mouse sobre o card</button>
+          <div class="card-descritivo">
+            <p>Além das habilidades cognitivas, trabalhamos diariamente valores como:
+                respeito,
+                gentileza,
+                empatia,
+                cooperação,
+                responsabilidade,
+                coragem,
+                resiliência,
+                amor 
+              Esses valores acompanham o aluno em sua transição para a pré-adolescência e tornam-se alicerces para toda a formação futura.</p>
+          </div>
+        </div>
+      </div>
+  </section>
+  <section class="unidade">
+    <h1>Unidades</h1>
+    <div class="unidade-um">
+      <img style="height: 70%; width: 40%;" src="img/Gemini_Generated_Image_xljridxljridxljr.png">
+      <div class="package-um">
+        <h1>Unidade ABC</h1>
+        <h4>Rua dos Bobos, nº 0, Bairro do Nada, São Nunca - SN</h4>
+      </div>
+    </div>
+    <div class="unidade-dois">
+      <img style="height: 70%; width: 40%;" src="img/Gemini_Generated_Image_xljridxljridxljr.png">
+		  <div class="package-um">
+			  <h1>Unidade DEF</h1>
+			  <h4>Rua dos Bobos, nº 0, Bairro do Nada, São Nunca - SN</h4>
+		  </div>
+    </div>
+	</section>
+  <!--<div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+                    <h3 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Meditação
+                      </button>
+                    </h3>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Meditação é um processo de autodomínio e autoconhecimento que busca transcender a mente e suas distorções, levando-nos a um estado de consciência mais puro e verdadeiro. Conforme Samael Aun Weor, meditar é alcançar o silêncio interno, conectando-nos com nossa essência e realidade. A prática regular da meditação oferece benefícios como paz interior, felicidade e maior sensibilidade à vida. </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h3 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Desdobramento Astral
+                      </button>
+                    </h3>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">O desdobramento astral é um fenômeno natural onde a alma se separa do corpo físico durante o sono, permitindo viajar e explorar outras dimensões. Embora frequentemente confundido com sonhos, o desdobramento astral pode ser consciente e voluntário. Para isso, é necessário praticar técnicas específicas, como a visualização de si mesmo como um ser etéreo ao adormecer e tentar flutuar no ambiente.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h3 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Chakras
+                      </button>
+                    </h3>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Despertar os chakras é um desafio para alcançar saúde e desenvolver nossas possibilidades latentes. A prática diária de disciplinas esotéricas e psicológicas nos recompensa com vibrações positivas e estados de felicidade. Os chakras nos conectam às dimensões supra-sensíveis, permitindo acesso a realidades superiores.<br><br>Praticar mantras ajuda no desenvolvimento de habilidades como telepatia, intuição e rememoração de vidas passadas.</div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+              <img src="img/low-angle-view-woman-with-eyes-closed-practicing-yoga-against-sky-copy-space.jpg" alt=""><br><br>
+              <p style="text-align: justify;">Também chamados de cursos de primeira câmara, são cursos gratuitos através dos quais se ensina as bases do conhecimento gnóstico, transmitindo de forma didática seus princípios fundamentais incluindo as principais técnicas e práticas de que uma pessoa necessita para desenvolver harmoniosamente todas as suas potencialidades humanas e espirituais.<br><br>O curso é divido em <b>23 temas</b> que abrangem</p>
+              <ul id="listaum" style="list-style-type:disc; font-size: 20px; display: block; text-align: justify;">
+                <li style="margin-left: 20%;">Psicologia Gnóstica</li>
+                <li style="margin-left: 20%;">Metafísica</li>
+                <li style="margin-left: 20%;">Religião</li>
+                <li style="margin-left: 20%;">Antropologia</li>
+                <li style="margin-left: 20%;">Alquimia</li>
+              </ul>
+              <br><p style="text-align: justify;">Ao final do curso, o aluno poderá solicitar um certificado de conclusão e, se assim quiser, adentrar ao que chamamos de <b>SEGUNDA CÂMARA</b></p>
+            </div>
+            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+              <img src="img/Logotipo-ICU-298x300.jpg" alt="">
+              <p>Esse instituto fundado por Samael Aun Weor organiza gnósticos e simpatizantes para a prática da caridade.<br><br> Tem como motivação o <b>amor desinteressado pela humanidade</b>, ajudando aquelas pessoas que por circunstâncias da vida não possuem meios para satisfazer por si mesmas as mais básicas necessidades humanas<br><br>
+              <img src="img/shutterstock_1218132919.jpg" style="width: 80%;">
+                <br><p style="text-align: center;">Para mais informações, clique <a href="https://www.icubrasil.org/" target="_blank">Neste link</a></p>
+            </div>
+            <div class="tab-pane fade" id="igcu-tab-pane" role="tabpanel" aria-labelledby="igcu-tab" tabindex="0">
+              <img src="img/johfra-a-grande-obra.png" style="width: 1000px; height: 400px; margin-left: auto; margin-right: auto; display: block; margin-bottom: 2%; margin-top: 3%;">
+              <p>Também chamada de <b>SEGUNDA CÂMARA</b>, congrega todos os estudantes gnósticos, amantes da sabedoria, que encontram nessa instituição o alimento espiritual de que necessitam para trilhar com segurança o caminho da revolução da consciência através da eliminação de seus defeitos, do nascimento espiritual e do sacrifício pela humanidade. <br><br>Na Igreja Gnóstica, seus membros recebem <b>instruções e práticas especiais, como orações, meditações e mantras</b>, que os levam ao desenvolvimento humano, intelectual, moral e espiritual.<br><br> Para ser membro da Igreja Gnóstica é <b>necessário haver completado o estágio da primeira câmara</b> ou Curso de Autoconhecimento.</p>
+            </div>
+          </div>
+	</div>-->
+  <div class="contato-form">
+    <p style="text-align: center;">Quer Saber Mais?</p>
+    <h3 style="text-align: center;">Preencha o formulário ou acesse nosso botão do whatsapp</h3>
+    <div class="formulario">
+      <form action="" method="post" class="formulario-inscricao">
+        <label for="nome">Nome</label>
+        <input type="text" placeholder="Informe seu nome" id="nome">
+        <label for="sobrenome">Sobrenome</label>
+        <input type="text" placeholder="Informe seu sobrenome" id="sobrenome">
+        <label for="e-mail">E-mail</label>
+        <input type="text" placeholder="E-mail" id="email">
+        <label for="contato">Contato</label>
+        <input type="text" placeholder="Informe seu número" id="contato">
+        <label for="assunto">Contato</label><textarea name="assunto" id="assunto" placeholder="Digite aqui sua dúvida" rows="7" cols="40"></textarea>
+        <button class="submeter">Submeter</button>
+      </form>
+    </div>
+  </div>
+  <!--<aside>
+    <div class="animate__animated animate__fadeInUp animate__delay-5s" id="social_media">
+      <a href="https://www.instagram.com/gnosisbrasil.salvador?igshid=MzRlODBiNWFlZA%3D%3D" target="_blank"><img src="img/social-media-logo-collection.png"></a>
+      <a href="https://wa.me/5571993364527?text=Gostaria+de+me+inscrever+no+Evento%21" target="_blank"><img src="img/social-media-logo-collection - Copia.png"></a>
+    </div>
+  </aside>-->
+  
+  <footer>
+			<div>
+			   <a href="index.html">
+					<img src="img/ChatGPT_Image_28_de_mai._de_2025__18_02_36-removebg-preview.png" style="height: 80px;" alt="logo da escola jacaré Feliz">
+			   </a>
+			</div>
+			<div class="container-footer">
+				<div class="rodape-info">
+					<h3 class="h3_rodape">Ensino</h3>
+					<a class="a-style-footer"  href="#">Berçário</a>
+					<a class="a-style-footer"  href="#">Creche-escola</a>
+					<a class="a-style-footer"  href="#">Jardim de Infância</a>
+					<a class="a-style-footer"  href="#">Ensino Fundamental I</a>
+				</div>
+				<div class="rodape-info">
+					<h3 class="h3_rodape">Entre em Contato</h3>
+					<div class="contato-link">
+						<a class="a-style" href="https://w.app/gnosisbrasilsalvador" target="_blank"><img src="img/58-removebg-previewin.png" alt="logo clicável do LinkedIn" class="insta-img"></a>
+						<a class="a-style" href="https://w.app/gnosisbrasilsalvador" target="_blank"><img src="img/58-removebg-preview.png" alt="logo clicável do Whatsapp" class="insta-img"></a>
+						<a class="a-style"  href="#"><img src="img/configuracao-de-circulos-de-e-mail_1_-removebg-preview.png" alt="logo clicável do LinkedIn" class="insta-img"></a>
+						<a class="a-style"  href="https://www.instagram.com/gnosisbrasil.salvador?igshid=MzRlODBiNWFlZA%3D%3D" target="_blank"><img src="img/58-removebg-previewinsta.png" alt="logo clicável do Instagram" class="insta-img"></a>
+					</div>
+				</div>
+					
+				<div class="rodape-info">
+					<h3 class="h3_rodape">Unidades</h3>
+					<a class="a-footer" href="https://w.app/gnosisbrasilsalvador" target="_blank">Unidade ABCD</a>
+					<a class="a-footer"  href="#">Unidade EFGH</a>
+
+				</div>
+				<div class="rodape-info">
+					<h3 class="h3_rodape">Sobre e Termos</h3>
+					<a class="a-style"  href="quemsomos.html">Quem Somos</a>
+					<a class="a-style" href="#">Links de Referência</a>
+				</div>
+			</div>
+			<div id="nota">
+				<h4>Escola Jacaré Feliz LTDA. Todos os direitos reservados©.</h4>
+			</div>
+		</footer>
+    <a class="whats-button" href="https://wa.me/5527981821964?text=Gostaria%20de%20matricular%20meu(minha)%20filho(a)" target="_blank"><img src="img/10464266.png" class="whats-img"></a>
+    
+  <script src="scripts.js"></script>
+</body>
+</html>
