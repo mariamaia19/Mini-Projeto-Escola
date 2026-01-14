@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="menuteste.css">
   <link rel="stylesheet" href="teste.css">
 	<link rel="stylesheet" href="">
 	<link rel="preconnect" href="https://fonts.googleapis.com"> <!--GOOGLE FONTS POPPINS-->
@@ -25,8 +25,56 @@
 </head>
 <body>
 	<header>
-		
-            
+		<div class="logotipo" id="escola">
+			<a href="index.html"><img src="ChatGPT_Image_28_de_mai._de_2025__18_02_36-removebg-preview.png" alt="logotipo da Escola Jacaré Feliz" style="height: 70px;"></a> <!--para adicionar link na imagem, coloque a imagem dentro da tag a-->
+		</div>
+    <!--<form>
+		  <input type="search" name="caixa-busca" placeholder="O que está buscando?" class="campo" size="25">
+		  <button type="button" class="botao botao-busca" name="buscar">Buscar</button>
+	  </form>-->
+		<nav>
+				<ul>
+					<li><a class="a-text" href="index.html">Início</a></li>
+					<li class="dropdown">
+            			<a class="a-text">A EJF▾</a>
+            				<ul>
+              					<div class="dropdown-content" id="drop-cont">
+                          <li><a class="a-text" href="quemsomos.html">Quem Somos</a></li>
+									        <li><a class="a-text2" href="#">Séries▸</a></li>
+									        <li><a class="a-text2" href="programacao.html">Eventos▸</a></li>
+									        <li class="sub-dropdown"><a class="a-text2" href="programacao.html">Institucional▸</a>
+										        <ul>
+											        <div class="dropdown-content2" id="drop_cont2">
+											          <li><a class="a-text2" href="loginaluno.html" target="_blank">Portal do Aluno</a></li>
+											          <li><a class="a-text2" href="#" target="_blank">Portal dos Pais</a></li>
+											          <li><a class="a-text2" href="#" target="_blank">Portal do Professor</a></li>
+                              </div>
+                            </ul>	
+                          </li>
+                        </div>	
+            				</ul>
+          			</li>
+					<li class="dropdown"> <!--A classe vem no li ou na div??-->
+							<a class="a-text" href="location.html" onclick="showdropdown()">Unidades▾</a> <!--tem que ter dropdown-->
+								<!--<ul>
+									<div class="dropdown-content">
+										<li><a class="a-text2" href="quemsomos.html">Encontre uma unidade </a></li>
+										<li><a class="a-text2" href="contato.html">Seja um franqueado ▸</a></li>
+									</div>	
+								</ul>-->
+					<li class="dropdown">
+						<a class="a-text" href=# onclick="showdropdown()">Contato▾</a>
+							<ul>
+									<div class="dropdown-content" id="drop_cont2">
+										<li><a class="a-text2" href="quemsomos.html">Fale Conosco▸</a></li>
+										<li><a class="a-text2" href="matriculas.html">Matrículas▸</a></li>
+										<li><a class="a-text2" href="contato.html">Trabalhe com a gente▸</a></li>
+									</div>	
+								</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>        
 	</header>
     <main class="box-container">
       <div class="card-container swiper">

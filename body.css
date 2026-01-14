@@ -333,9 +333,6 @@ Estes padrões aqui estão sendo aplicados para DESKTOP:*/
     border: none;
 }
 
-.info {
-    
-}
 
 .package-um p {
     color: var(--bkg1);
@@ -517,6 +514,20 @@ input::placeholder {
 
 #texto_tres {font-size: 50px; margin-top: 10%; text-align: center; font-weight: 700;}
 
+.heroimg_local2 {
+      width: 100%;
+      background: linear-gradient(to right, rgb(87, 86, 86), rgba(46, 31, 2, 0.2)), url(img/close-up-person-using-mobile-phone.jpg) no-repeat center center;
+      background-size: cover;
+      background-position-x: right;
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+.herotext_local2 h2 {color: var(--menutxt); font-family: var(--fonte_secundaria); font-size: 60px;}
   
 .localizacao {
     display: flex;
