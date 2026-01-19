@@ -13,7 +13,7 @@ body {
             width: 40%;
             @include displayColumnSA;
             h1 {
-                font-size: $tamanhos-fonte-grande;
+                font-size: 3rem;
                 color: $cor-texto-claro;
             }
 
@@ -39,7 +39,7 @@ body {
         @media (max-width: 768px) {
             @include displayColumnReverse;
             .box_one {
-                width: 100%;
+                width: 90%;
             }
         }
     }
@@ -48,7 +48,10 @@ body {
         background-color: $botao-cor-medio;
 
         .package-um {
-            h1 {font-size: $tamanho-fonte-subtitulo;}
+            h1 {
+                font-size: $tamanho-fonte-subtitulo;
+                text-align: center;
+            }
             p{
                 color: $cor-texto-escuro;
                 text-align: justify;
@@ -60,12 +63,18 @@ body {
         @media (max-width: 768px) {
             @include displayColumnReverse;
             .package-um {
-                width: 100%;
+                width: 90%;
+                height: 100vh;
+                h1 {
+                    font-size: 2.5rem;
+                }
+                p {
+                    font-size: 1rem;
+                }
             }
 
             img {
-                margin-top: 10%;
-                width: 70%;
+               margin-top: 0.5%; 
             }
         }
     }

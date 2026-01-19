@@ -29,7 +29,7 @@ body .box-container .box_one {
   gap: 0.5em;
 }
 body .box-container .box_one h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   color: white;
 }
 body .box-container .box_one p {
@@ -55,7 +55,7 @@ body .box-container .box_two img {
     align-items: center;
   }
   body .box-container .box_one {
-    width: 100%;
+    width: 90%;
   }
 }
 body .propostas {
@@ -67,6 +67,7 @@ body .propostas {
 }
 body .propostas .package-um h1 {
   font-size: 3rem;
+  text-align: center;
 }
 body .propostas .package-um p {
   color: rgb(8, 36, 68);
@@ -82,11 +83,17 @@ body .propostas .package-um p {
     align-items: center;
   }
   body .propostas .package-um {
-    width: 100%;
+    width: 90%;
+    height: 100vh;
+  }
+  body .propostas .package-um h1 {
+    font-size: 2.5rem;
+  }
+  body .propostas .package-um p {
+    font-size: 1rem;
   }
   body .propostas img {
-    margin-top: 10%;
-    width: 70%;
+    margin-top: 0.5%;
   }
 }
 body .unidade {
