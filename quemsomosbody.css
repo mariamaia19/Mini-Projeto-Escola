@@ -1,0 +1,217 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+/*CRIANDO VARIÁVEIS SCSS*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+body .box-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(12, 52, 84);
+}
+body .box-container .box_one {
+  width: 40%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 0.5em;
+}
+body .box-container .box_one h1 {
+  font-size: 4rem;
+  color: white;
+}
+body .box-container .box_one p {
+  text-align: justify;
+  font-size: 18px;
+  color: white;
+}
+body .box-container .box_two {
+  width: 40%;
+}
+body .box-container .box_two img {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 100%;
+  height: 50%;
+  border-radius: 20px;
+}
+@media (max-width: 768px) {
+  body .box-container {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  body .box-container .box_one {
+    width: 100%;
+  }
+}
+body .propostas {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #eee734;
+}
+body .propostas .package-um h1 {
+  font-size: 3rem;
+}
+body .propostas .package-um p {
+  color: rgb(8, 36, 68);
+  text-align: justify;
+  text-shadow: none;
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  body .propostas {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  body .propostas .package-um {
+    width: 100%;
+  }
+  body .propostas img {
+    margin-top: 10%;
+    width: 70%;
+  }
+}
+body .unidade {
+  background-color: rgb(12, 52, 84);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 0.5em;
+}
+body .unidade h1 {
+  font-size: 4rem;
+  color: white;
+  margin: auto;
+}
+body .unidade .unidade-um {
+  margin-top: 5%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+body .unidade .unidade-um h4 {
+  font-size: 18px;
+  color: white;
+  text-align: center;
+}
+body .unidade .unidade-um img {
+  border-radius: 20px;
+}
+body .unidade .unidade-dois {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5%;
+}
+body .unidade .unidade-dois h4 {
+  font-size: 18px;
+  color: white;
+  text-align: center;
+}
+body .unidade .unidade-dois img {
+  border-radius: 20px;
+  margin-bottom: 5%;
+}
+@media (max-width: 768px) {
+  body .unidade {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 0.5em;
+  }
+  body .unidade .unidade-um, body .unidade .unidade-dois {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  body .unidade .unidade-um h1, body .unidade .unidade-dois h1 {
+    font-size: 1.5rem;
+  }
+}
+body .contato-form {
+  margin-top: 1%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1%;
+}
+body .contato-form p {
+  color: rgb(8, 36, 68);
+  text-shadow: none;
+  font-size: 30px;
+}
+body .formulario {
+  width: 50%;
+}
+body .formulario .formulario-inscricao {
+  display: flex;
+  flex-flow: column;
+  background-color: var(--bkg1);
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+}
+body .formulario .formulario-inscricao label {
+  color: var(--menutxt);
+  font-size: 20px;
+  margin: 1%;
+}
+body .formulario .formulario-inscricao input[type=text], body .formulario .formulario-inscricao #assunto {
+  padding: 7px;
+  width: 90%;
+  border-radius: 10px;
+  margin: 10px;
+}
+body .formulario .formulario-inscricao input::-moz-placeholder {
+  padding: 10px;
+}
+body .formulario .formulario-inscricao input::placeholder {
+  padding: 10px;
+}
+body .formulario .formulario-inscricao .submeter {
+  padding: 2%;
+  border-radius: 25px;
+  background-color: var(--hover);
+  width: 80%;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  body .formulario .formulario-inscricao .contato-form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: space-between;
+  }
+  body .formulario .formulario-inscricao .contato-form .formulario {
+    width: 100%;
+  }
+  body .formulario .formulario-inscricao .contato-form .formulario .formulario-inscricao {
+    width: 100%;
+  }
+}/*# sourceMappingURL=quemsomosbody.css.map */

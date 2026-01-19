@@ -1,0 +1,207 @@
+@import 'base.scss';
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    .box-container {
+        @include displayRowSA;
+        background-color: $botao-cor-escuro;
+        .box_one {
+            width: 40%;
+            @include displayColumnSA;
+            h1 {
+                font-size: $tamanhos-fonte-grande;
+                color: $cor-texto-claro;
+            }
+
+            p {
+                text-align: justify;
+                font-size: $tamanhos-fonte-pequena;
+                color: $cor-texto-claro;
+            }
+        }
+
+        .box_two {
+            width: 40%;
+
+            img {
+                margin-top: 5%;
+                margin-bottom: 5%;
+                width: 100%;
+                height: 50%;
+                border-radius: 20px;
+            }
+
+        }
+        @media (max-width: 768px) {
+            @include displayColumnReverse;
+            .box_one {
+                width: 100%;
+            }
+        }
+    }
+    .propostas {
+        @include displayRowReverse;
+        background-color: $botao-cor-medio;
+
+        .package-um {
+            h1 {font-size: $tamanho-fonte-subtitulo;}
+            p{
+                color: $cor-texto-escuro;
+                text-align: justify;
+                text-shadow: none;
+                font-size: $tamanhos-fonte-pequena;
+            }
+        }
+
+        @media (max-width: 768px) {
+            @include displayColumnReverse;
+            .package-um {
+                width: 100%;
+            }
+
+            img {
+                margin-top: 10%;
+                width: 70%;
+            }
+        }
+    }
+
+    .unidade {
+        background-color: $botao-cor-escuro;
+        @include displayColumnSA;
+        h1 {
+            font-size: $tamanhos-fonte-grande;
+            color: $cor-texto-claro;
+            margin: auto;
+        }
+
+        .unidade-um {
+            margin-top: 5%;
+            @include displayRowSA;
+
+            h4 {
+                font-size: $tamanhos-fonte-pequena;
+                color: $cor-texto-claro;
+                text-align: center;
+            }
+
+            img {
+                border-radius: 20px;
+            }
+        }
+
+        .unidade-dois {
+            @include displayRowReverse;
+            margin-top: 5%;
+
+             h4 {
+                font-size: $tamanhos-fonte-pequena;
+                color: $cor-texto-claro;
+                text-align: center;
+            }
+
+            img {
+                border-radius: 20px;
+                margin-bottom: 5%;
+            }
+
+        }
+
+        @media (max-width: 768px) {
+            @include displayColumnSA;
+
+            .unidade-um, .unidade-dois {
+                @include displayColumnReverse;
+
+                h1 {
+                    font-size: $tamanhos-fonte-media;
+                }
+            }
+        }
+
+    }
+
+    .contato-form {
+        margin-top: 1%;
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1%;
+
+        p {
+            color: $cor-texto-escuro;
+            text-shadow: none;
+            font-size: 30px;
+        }
+
+    }
+
+    
+    .formulario {
+            width: 50%;
+
+        .formulario-inscricao {
+            display: flex;
+            flex-flow: column;
+            background-color: var(--bkg1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+
+            label {
+                color: var(--menutxt);
+                font-size: 20px;
+                margin: 1%;
+            }
+
+            input[type=text], #assunto {
+                padding: 7px;
+                width: 90%;
+                border-radius: 10px;
+                margin: 10px;
+            }
+
+                input::placeholder {
+                    padding: 10px;
+                }
+
+
+            .submeter {
+                padding: 2%;
+                border-radius: 25px;
+                background-color: var(--hover);
+                width: 80%;
+                margin: auto;
+            }
+
+
+            @media (max-width: 768px) {
+
+                .contato-form {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: space-between;
+                    align-items: space-between;
+
+                    .formulario {
+                        width: 100%;
+
+                        .formulario-inscricao {
+                            width: 100%;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+    
+
