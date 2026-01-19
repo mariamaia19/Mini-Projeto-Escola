@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+/*CRIANDO VARIÁVEIS SCSS*/
+
+$cor-texto-claro: white;
+$cor-texto-escuro: rgb(8, 36, 68);
+$botao-cor-claro: #fafa3c;
+$botao-cor-medio: #eee734;
+$botao-cor-medio-escuro: rgba(108, 100, 7, 0.5);
+$botao-cor-escuro: rgb(12,52,84); 
+$tamanhos-fonte-pequena: 18px;
+$tamanhos-fonte-grande: 40px;
+$tamanhos-fonte-media: 1.5rem;
+
+@mixin displayRowCenter {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+@mixin displayOculto {
+    display: none;
+}
+
+@mixin displayRowSA {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin displayColumnCenter {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@mixin displayColumnSA {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 0.5em;
+
+}
+
+@mixin linksClicaveis {
+    cursor: pointer;
+    color: $cor-texto-escuro;
+    text-decoration: none;
+    
+    &:hover {
+        color: $cor-texto-claro;
+        text-shadow: 1px 1px 1px black;
+    }
+}
+
+@mixin displayRowSB {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin mobileHidden {
+    @media (max-width: 768px) {
+        @include displayOculto();
+    }
+    
+}
+
+@mixin mobileViewMenu {
+    @media (max-width: 768px) {
+        @include displayColumnCenter();
+        width: 100%;
+        background-color: $botao-cor-medio-escuro;
+    }
+}
+
+@mixin mobileBurger {
+    @media (min-width: 340px) and (max-width: 768px) {
+        @include displayRowSB();
+    }
+}
+
+
+
+header {
+    background-color: $botao-cor-medio;
+    @include displayRowSB();
+    gap: 0;
+
+    .logotipo {
+        @include mobileHidden();
+    }
+    
+    .menu {
+        @include displayRowSA();
+        width: 100%;
+        align-content: center;
+
+        @media (max-width: 768px) {
+            width: 100%; // No mobile, ocupa tudo para o hambúrguer ir para a ponta
+        }
+
+        .menu-itens {
+            list-style: none;
+            margin: 0; //o margin e padding 0 garantem que o item de menu esteja alinhado com os demais coonteúdos do header
+            padding: 0;
+            width: 80%;
+            @include displayRowSB(); 
+
+            @media (max-width: 768px) {
+                display: none; // FECHADO POR PADRÃO
+                li {
+                border: none;
+                }
+            }
+        }
+
+        .menu-itens.menu-aberto {
+            @media (max-width: 768px) {
+                @include displayColumnCenter();
+                width: 100vw;          // ocupa toda a viewport
+                position: absolute;    // sai do fluxo
+                top: 0;
+                left: 0;
+                background-color: $botao-cor-medio-escuro;
+            }
+        }
+
+            li {
+                list-style: none;
+                @include displayRowCenter();
+                gap: 1em;
+                a {
+                    @include linksClicaveis();
+                    font-size: $tamanhos-fonte-media;
+                    
+            }
+        }
+
+        .botoes-menu {
+            margin-left: auto;
+            
+           // width: 20%;
+
+             .menu-burger {
+                font-size: 30px;
+                color: $cor-texto-claro;
+                @include displayOculto();
+            }
+
+            .fechar-menu, .abrir-menu {
+                border-radius: 50%;
+                background-color: $botao-cor-escuro;
+                padding: 1%;
+            }
+
+            .menu-burger {
+                @include mobileBurger();
+                z-index: 1100;
+            }
+        }
+
+        .dropdown {
+            position: relative;
+            .dropdown-content {
+                position: absolute;
+                width: 250px;
+                padding: 20px;
+                gap: 0.5rem;
+                height: auto;
+                border-radius: 10px;
+                top: 100%;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transform: translateY(-10px);
+                transition: opacity 1.5s ease, transform 0.3s ease, top 3s ease;
+                
+                background-color: $botao-cor-claro;
+
+                li {
+                    a {
+                        font-size: $tamanhos-fonte-pequena;
+                    }
+                }
+
+                .sub-dropdown {
+                    @include displayOculto();
+                }
+            }
+
+            &:hover {
+                .dropdown-content {
+                    @include displayColumnSA();
+                    top: 120%;
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: auto;
+                    transform: translateY(0);
+                   
+                }
+            }
+
+           
+
+        }
+    
+    }   
+
+}

@@ -40,7 +40,7 @@ Estes padrões aqui estão sendo aplicados para DESKTOP:*/
   :root {
     --bkg1: rgb(12,52,84);
     --bkg2: rgb(8, 36, 68);
-      --hover:  #fdfd40;
+    --hover:  #fdfd40;
     --menutxt: white;
     --button_color: #ffc907;
     --shad: rgb(52, 52, 52);
@@ -62,7 +62,7 @@ Estes padrões aqui estão sendo aplicados para DESKTOP:*/
     bottom: 20px;
 }
   /*================== INICIO DO CONTEÚDO ==================*/
-  /*================== INICIO DO CONTEÚDO - CONTEÚDO DA HOME PAGE e LANDING PAGE ==================*/
+  /*================== INICIO DO CONTEÚDO - CONTEÚDO DA LANDING PAGE ==================*/
   
 .heroimg_lp {
       background: linear-gradient(to right, rgb(1, 1, 1), rgba(46, 31, 2, 0.2)), url(img/fogueira-ia.jpeg) no-repeat center center;
@@ -74,7 +74,7 @@ Estes padrões aqui estão sendo aplicados para DESKTOP:*/
       align-items:center;
       box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
-  .heroimg_lp::before {
+.heroimg_lp::before {
       background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
   }
   
@@ -228,6 +228,37 @@ Estes padrões aqui estão sendo aplicados para DESKTOP:*/
 
 }
 
+.card {
+    border: 1px solid black;
+    width: 20%;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card-description  {
+    text-align: center;
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-description {
+    color: black;
+    text-shadow: none;
+}
+
 #titulo-resumo {
     text-align: right;
     font-size: 20px;
@@ -253,11 +284,13 @@ Estes padrões aqui estão sendo aplicados para DESKTOP:*/
     padding: 20px;
 }
 
-#cta_one {height: 70vh; width: 100%; margin-top: 10%;}
-#cta_one p {font-size: 40px; color: var(--bkg1); text-shadow: none;}
-#cta_one h2{font-size: 70px; color: var(--bkg1); font-family: var(--fonte_secundaria);}
-#social_media {display: flex; flex-flow: row wrap; justify-content: center;}
-#social_media img {width: 150px; height: 150px;}
+.card-container2 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    margin-top: 5%;
+
+}
 
 #resumo_instituicao {height: 50vh; margin-top: 5%;}
 #resumo_instituicao p {font-size: 20px; text-align: justify; color: var(--bkg1); text-shadow: none;}
@@ -296,174 +329,6 @@ Estes padrões aqui estão sendo aplicados para DESKTOP:*/
 }
 .hero_content3 p { font-size: 22px;}
 .hero_content3 h3 { font-family: var(--fonte_secundaria);}
-
-/* ==================== CONTEÚDO DA PÁGINA QUEM SOMOS ==================== */
-
-.box-container h1 {
-    font-size: 70px;
-    font-weight: 600;
-    color: var(--bkg1);
-    margin-top: 10%;
-    margin-left: 8%;
-}
-
-.box-container {display: flex; flex-direction: row; width: 100%; justify-content: space-around; }
-
-.box_one {width: 55%;}
-
-.box_one p {
-    font-size: 20px;
-    color: var(--bkg1);
-    margin-top: 5%;
-    margin-left: 8%;
-    text-align: justify;
-    text-shadow: none;
-    font-weight: 530;
-}
-.box_two {width: 35%; }
-.box_two img {
-    height: 90%;
-    width: 100%;
-    align-items: center;
-    margin-top: 10%;
-    margin-right: 5%;
-}
-.propostas {
-    background-color: var(--button_color);
-    border: none;
-}
-
-
-.package-um p {
-    color: var(--bkg1);
-    text-shadow: none;
-    font-size: 20px;
-    text-align: justify;
-}
-
-.container_two {
-    width: 100%;
-    height: 100vh;
-}
-
-.container_two h1 {
-    color: var(--bkg1) !important;
-}
-
-.unidade {
-    background-color: var(--bkg1);
-}
-
-.unidade h4 {
-    color: var(--menutxt);
-}
-
-.unidade h1 {
-    color: var(--menutxt);
-    font-size: 50px;
-    text-align: center;
-}
-
-.unidade-um, .unidade-dois {
-    padding: 2%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.unidade-um img, .unidade-dois img {
-    border-radius: 10px;
-}
-
-.unidade-dois {
-    flex-direction: row-reverse;
-}
-
-#banner_dois {
-    margin-top: 5%;
-    text-align: center;
-    border: none;
-}
-
-#banner_dois p {font-size: 40px;font-family: var(--fonte_secundaria); color: var(--bkg1); text-shadow: none;}
-#banner_dois h1 {
-    font-size: 60px;
-    color: var(--bkg2);
-    font-weight: 550;
-    margin-bottom: 5%;
-}
-
-#home-tab-pane, #contact-tab-pane, #igcu-tab-pane {text-align: justify; margin: auto;}
-#home-tab-pane img, #profile-tab-pane img {width: 500px; height: 350px; display: block; margin-left: auto; margin-right: auto; margin-top: 3%;}
-#home-tab-pane p, #contact-tab-pane p, #profile-tab-pane p, #igcu-tab-pane p {font-size: 20px; width: 65%; margin: auto;}
-.nav-item a {
-    font-size: 20px;
-}
-#contact-tab-pane img{display: block; margin-left: auto; margin-right: auto;}
-
-#nav-list {
-    display: block;
-    list-style-type: circle;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.contato-form {
-    margin-top: 1%;
-    height: 180vh;
-    width: 100vw;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-
-.contato-form p {
-    color: var(--bkg1);
-    text-shadow: none;
-    font-size: 30px;
-}
-label {
-    color: var(--menutxt);
-    font-size: 20px;
-    margin: 1%;
-}
-.formulario {
-    width: 50%;
-}
-
-.formulario-inscricao {
-    display: flex;
-    flex-flow: column;
-    background-color: var(--bkg1);
-    border-radius: 10px;
-    padding: 20px;
-}
-
-.formulario-inscricao p {
-    font-size: 20px;
-    color: var(--menutxt);
-    text-shadow: none;
-}
-input[type=text], #assunto {
-    padding: 7px;
-    width: 90%;
-    border-radius: 10px;
-    margin: 10px;
-}
-input::placeholder {
-    padding: 10px;
-}
-
-.submeter {
-    padding: 2%;
-    border-radius: 25px;
-    background-color: var(--hover);
-    width: 80%;
-    margin: auto;
-}
 
                  /* ======contato====== */
 
@@ -682,913 +547,137 @@ input::placeholder {
       box-shadow: 2px 2px 7px rgb(195, 193, 193);
   }
  
- /* INTRODUÇÃO AO MEDIA QUERY - MOBILE ATÉ 992px*/
- @media (max-width: 500px) {
-  /* ========CONTEÚDO DA HOME PAGE========== */
-  
-    .heroimg_homepage {
-        background: url(img/garotinho-fazendo-licao-de-casa-na-biblioteca.jpg) no-repeat center center;
-        background-size: cover;
-        height: 45vh;
+@media screen and (max-width: 768px) {
+    
+    .heroimg_homepageescola {
         display: flex;
-        justify-content:center;
-        align-items:center;
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    }
-
-    .hero_text_hp {text-align: center; justify-content: center;}
-    .hero_text_hp p {font-size: 25px; color: var(--menutxt); text-shadow: 2px 2px 8px black;}
-    .hero_text_hp h2 {color: var(--menutxt); font-size: 35px; text-shadow: 2px 2px 7px black; font-family: var(--fonte_secundaria); width: 100%;}
-
-    .button_one {
-        text-align: center;
-        font-family: var(--fonte_terciaria);
-        background-color: var(--hover);
-        font-size: 15px;
-        color: var(--menutxt);
-        cursor: pointer;
-        border-radius: 10px;
-        box-shadow: 0 3px 5px grey;
-        text-shadow: 2px 2px 4px black;
-        text-decoration: none;
-        width: 50%; 
-        padding: 7px 9px;
-    }
-
-    .container_one {display: block; margin-bottom: 20%;}
-
-    #titulo {margin-top: 5%;}
-    #titulo h2 {color: var(--bkg1); font-family: var(--fonte_secundaria); font-size: 45px; text-align: left; font-weight: 650;}
-    #titulo p {font-size: 22px;}
-    .card-box {width: 70%;  margin: auto; box-shadow: 2px 2px 8px gray;}
-    .card-box img {width: 100%; height: 40vh; }
-    .card-text {text-align: center; height: 20vh; }
-
-    #banner_um {
-        width: 80%;
-        height: 30vh;
-        margin: auto;
-        background: url(img/Imagem2.png); 
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/garotinho-fazendo-licao-de-casa-na-biblioteca.jpg
+        );
         background-position: center;
-        background-repeat: no-repeat; 
-        background-size: 100% 100%;
-    }
-    
-    #banner_um p {
-        color: var(--menutxt);
-        font-size: 10px
-    }
-    
-    #cta_one {height: 50vh; width: 100%; margin-top: 20%;}
-    #cta_one p {font-size: 22px;}
-    #cta_one h2{font-size: 40px; color: var(--bkg1); font-family: var(--fonte_secundaria);}
-    #social_media {display: flex; flex-flow: row wrap; justify-content: center;}
-    #social_media img {width: 100px; height: 100px;}
-    #resumo_instituicao {height: 50vh; margin-top: 5%;}
-    #resumo_instituicao p {font-size: 15px; text-align: justify;}
-
-    /* ======CONTEÚDO DA PÁGINA QUEM SOMOS======= */
-
-     .box-container h1 {font-size: 50px; font-weight: 600; color: var(--menutxt);}
-    .box-container {display: flex; flex-flow: column; width: 100%; }
-    
-    .box_one {width: 100%; background-color: var(--bkg2);}
-    .box_one p {
-        font-size: 18px;
-        color: var(--menutxt);
-        margin-top: 5%;
-        margin-left: 8%;
-        text-align: left;
-    }
-    .box_two {width: 100%; background-color: var(--bkg2);}
-    .box_two img { width: 100%; align-items: center; margin-right: 5%;}
-    
-    #banner_dois { margin-top: 20%;text-align: center;}
-    
-    #banner_dois p {font-size: 20px; font-family: var(--fonte_secundaria); color: var(--bkg1);}
-    #banner_dois h1 {
-            font-size: 40px;
-            color: var(--bkg2);
-            font-weight: 550;
-            margin-bottom: 5%;
-        }
-    #home-tab-pane, #contact-tab-pane, #igcu-tab-pane {text-align: justify; margin: auto;}   
-    #home-tab-pane img, #profile-tab-pane img {width: 400px; height: 250px; display: block; margin-left: auto; margin-right: auto; margin-top: 3%;}  
-    #home-tab-pane p, #contact-tab-pane p, #profile-tab-pane p, #igcu-tab-pane p {font-size: 17px; width: 65%; margin: auto;}
-    .nav-item a  {font-size: 20px;}
-    #contact-tab-pane img{display: block; margin-left: auto; margin-right: auto;}
-    #nav-list {
-            display: block;
-            list-style-type: circle;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-    /* TOPO - HERO IMAGE 1 BANNER E BOTÕES */
-    .hero_image1 {
-        background: linear-gradient(to right, rgb(1, 1, 1), rgba(46, 31, 2, 0.2)), url(img/fogueira-ia.jpeg) no-repeat center center;
         background-size: cover;
-        background-position-x: right;
-        height: 80vh;
-        display: block;
-        justify-content:left;
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        background-repeat: no-repeat;
+        height: 90vh;
     }
 
-    #mobile-img {
-        width: 90%;
-        height: 28vh;
-    }
+    .hero_text h2 {color: var(--menutxt); font-family: var(--fonte_secundaria); font-size: 3rem;}
+    .hero_text p {color: var(--menutxt); font-family: var(--fonte_secundaria); font-size: 1.5rem; }
 
-    .hero_image1::before {
-        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
-    }
-    .hero_text1 {
-        text-align: center;
-    }
-
-    .hero_text1 h2 {
-        font-size: 50px;
-    }
-
-    .hero_text1 p {
-        color: var(--menutxt);
-        margin-top: 2%;
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-
-    #button1 {
-        display: inline-block;
-        margin-top: 8%;
-        text-align: center;
-        font-family: var(--fonte_terciaria);
-        font-weight: 550;
-        background-color: var(--hover);
-        font-size: 20px;
-        padding: 18px;
-        text-transform: uppercase;
-        border-radius: 10px;
-        box-shadow: 0 3px 5px grey;
-    }
-
-    #button1:hover {
-        color: var(--menutxt);
-        text-shadow: 1px 1px rgb(74, 74, 74);
-    }
-
-    .banner {
-        width: 100%;
-        margin: 0;
-        min-height: 40vh;
-        text-align: center;
-        color: var(--menutxt);
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    }
-    
-    .banner p {
-        margin-top: 10%;
-        font-size: 25px;
-    }
-    
-    .banner h2 {
-        font-family: var(--fonte_terciaria);
-        margin-top: 2%;
-        font-size: 50px;
-        font-weight: 400;
-        font-style: bold;
-        text-shadow: 2px 2px var(--shad);
-    }
-    
-    .imagens {width: 100%;}
-
-    .container h2{font-family: var(--fonte_secundaria); color: var(--bkg2); font-size: 50px; text-align: center;}
-
-    /* ======== PÁGINA QUEM SOMOS ========*/
-
-    .box-container {
-        display: flex;
-        flex-direction: column !important;
-        width: 100%;
-    }
-
-    /* =====PAGINA DE CONTATO===== */
-
-    .heroimg_contato {
-        width: 100%;
-        background: linear-gradient(to right, rgb(1, 1, 1), rgba(46, 31, 2, 0.2)), url(img/close-up-person-using-mobile-phone.jpg) no-repeat center center;
-        background-size: cover;
-        background-position-x: right;
-        height: 60vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    }
-
-    .hero_image2 p {
-        width: 100%;
-        text-align: center;
-    }
-
-    .hero_image2 h2 {
-        text-shadow: 3px 3px 10px black;
-    }
-
-
-/* ==================== CONTEÚDO DA PÁGINA DE LOCALIZAÇÃO/VISITE-NOS ====================  */
-
-    .heroimg_local {
-        width: 100%;
-        background: linear-gradient(to right, rgb(87, 86, 86), rgba(46, 31, 2, 0.2)), url(img/WhatsApp\ Image\ 2024-05-28\ at\ 10.25.41.jpeg) no-repeat center center;
-        background-size: cover;
-        background-position-x: right;
-        height: 60vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    }
-    .heroimg_local h2,p {text-shadow: 3px 3px 10px black; color: var(--menutxt);}
-    .herotext_local h2 {color: var(--menutxt); font-family: var(--fonte_secundaria); font-size: 40px;}
-    .herotext_local {color: var(--menutxt); font-family: var(--fonte_secundaria); font-size: 20px; }
-
-    #texto_tres h3 {font-size: 40px; margin-top: 10%; text-align: center; font-weight: 700; font-family: var(--fonte_secundaria);}
-
-    .localizacao {
-    display: flex;
-    flex-direction: column wrap;
+    .button_findschool {
+    display: inline-block;
+    margin-top: 8%;
     text-align: center;
-    margin-top: 15%;
-    width: 100%;
-    }
-
-    .mapa_sede { background-color: var(--button_color); color: var(--menutxt); font-size: 30px; text-shadow: 2px 2px 5px black; border-radius: 15px; padding: 15px; box-shadow: 2px 2px 8px lightgray; border: none;}
-
-    .endereco p {
-    font-family: var(--fonte_secundaria);
+    font-family: var(--fonte_terciaria);
+    font-weight: 650;
+    background-color: var(--hover);
+    font-size: 1.3rem;
+    padding: 15px 18px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px grey;
+    text-shadow: 2px 2px 8px black;
+    width: 255px;
+    text-decoration: none;
     color: var(--menutxt);
-    text-align: left;
-    margin-bottom: 5%;
-    font-size: 30px;
-    text-shadow: none;
     }
 
-    .localizacao img {display: none;}
+    .info, .metodos {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
 
-    .localizacao img {display: none;}
-    
-    /* RESTANTE DO CÓDIGO */
-    
-    .button2 {
-        margin-top: 2%;
-        border-radius: 5px;
-        font-family: var(--fonte_terciaria);
-        text-shadow: #131313;
-        font-size: 22px;
-        padding: 5px 20px;
-        background-color: var(--hover);
-        cursor: pointer;
-    }
-    
-    .button2:hover {
-        color: var(--menutxt);
-        text-shadow: 1px 2px #131313;
-    }
-    
-    .button2:active {
-        transform: translateY(1.5px);
-        }
-    
-    
-    .new_journey {
-        margin-top: 20%;
-        color: var(--menutxt);
+    .package-um {
+        width: 90%;
         text-align: center;
+    }
+
+    .info img, .metodos img {
+        width: 90%;
+        height: 45%;
+    }
+
+    .metodos {
+        flex-flow: column-reverse;
+
+    }
+
+    .divulgacao {
         height: 40vh;
-    }
-    
-    .start {
-        margin-top: 5%;
-        border: 2px outset;
-        border-radius: 8px;
-        padding: 15px 20px;
-        background-color: var(--hover);
-        font-family: var(--fonte_terciaria);
-        color: black;
-        font-size: 20px;
-        font-weight: 550;
-        box-shadow: 0 8px 1px 0 #2a2a2a;
-        cursor: pointer;
-    }
-    
-    .start:hover {
-        color: var(--menutxt);
-        text-shadow: 1px 2px #3d3d3d;
-    }
-    .new_journey h2 {
-        margin-top: 2%;
-    }
-    
-    .new_journey p {
-        margin-top: 3%;
-    }
-    
-    .start:active {
-        box-shadow: 0 5px #2a2a2a;
-      transform: translateY(4px);
+        margin-bottom: 0;
     }
 
-    /* ====PÁGINA DE PROGRAMAÇÃO==== */
-    
-    .programacao {
-        text-align: center;
-        margin-top: 5%;
-        height: 80vh;
-        width: 100%;
+    #banner {
+        height: 50%;
     }
 
-    .programacao h3 {
-        font-size: 50px;
-    }
-
-    .conteudoprogramatico {
-        margin: 2%;
-    }
-
-    .conteudoprogramatico p {
-        font-size: 25px;
-        text-align: left;
-    }
-
-    
-    .click {
-        background-color: var(--hover);
-        border-radius: 7px;
-        padding: 7px 40px;
-        box-shadow: 2px 2px 7px rgb(195, 193, 193);
-    }
-
-    
-
-    
-      /* PÁGINA DE PROGRAMAÇÃO */
-      .accordion-header h3 {font-size: 20px; font-weight: bold;}
-
-}
-
-
-@media (min-width: 501px) and (max-width:820px) {
-    
-  /* ========CONTEÚDO DA HOME PAGE========== */
-  
-    .heroimg_homepage {
-        background: url(img/3d-silhouette-man-with-arms-raised-against-sunset-ocean-landscape.jpg) no-repeat center center;
-        background-size: cover;
-        height: 50vh;
+    .card-container2 {
         display: flex;
-        justify-content:center;
-        align-items:center;
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    }
-
-    .hero_text_hp {text-align: center; justify-content: center;}
-    .hero_text_hp p {font-size: 30px; color: var(--menutxt); text-shadow: 2px 2px 8px black;}
-    .hero_text_hp h2 {color: var(--menutxt); font-size: 45px; text-shadow: 2px 2px 7px black; font-family: var(--fonte_secundaria); width: 100%; margin-bottom: 5%; margin-top: 5%;}
-    
-    
-    .button_one {
-        text-align: center;
-        font-family: var(--fonte_terciaria);
-        background-color: var(--hover);
-        font-size: 20px;
-        color: var(--menutxt);
-        cursor: pointer;
-        padding: 10px 15px;
-        border-radius: 10px;
-        box-shadow: 0 3px 5px grey;
-        text-shadow: 2px 2px 4px black;
-        width: 200px;
-        text-decoration: none;
-    }
-    #titulo {color: var(--bkg1); font-family: var(--fonte_secundaria); font-size: 50px; text-align: left; margin-top: 5%;}
-    #titulo h2 {font-size: 45px; margin-top: 0;}
-    #titulo p {font-size: 25px; margin-top: 0;}
-
-    .container_one {display: flex; flex-flow: row wrap;}
-    .card-box {width: 40%; margin: 5%;}
-    .card-box img {width: 100%; height: 40vh;}
-    .card-text {text-align: center; height: 20vh;}
-    .card-text p {font-size: 15px;}
-    .card-box {box-shadow: 2px 2px 8px 2px lightgray;}
-    .container h2 {color: var(--bkg1); font-family: var(--fonte_secundaria);}
-    .container { width: 100%;}
-   
-
-    #banner_um {
-        width: 80%;
-        height: 30vh;
-        margin: auto;
-        background: url(img/Imagem2.png); 
-        background-position: center;
-        background-repeat: no-repeat; 
-        background-size: 100% 100%;
-    }
-    #banner_um p { color: var(--menutxt); font-size: 10px}
-
-    #cta_one {height: 55vh; width: 100%; margin-top: 10%;}
-    #cta_one p {font-size: 30px;}
-    #cta_one h2{font-size: 45px; color: var(--bkg1); font-family: var(--fonte_secundaria);}
-    #social_media {display: flex; flex-flow: row wrap; justify-content: center;}
-    #social_media img {width: 100px; height: 100px;}
-    #resumo_instituicao { margin-top: 5%; height: 60vh;}
-    #resumo_instituicao p {font-size: 18px; text-align: justify;}
-
-
-/* TOPO - HERO IMAGE 1 BANNER E BOTÕES */
-.hero_image1 {
-    background: linear-gradient(to right, rgb(1, 1, 1), rgba(46, 31, 2, 0.2)), url(img/fogueira-ia.jpeg) no-repeat center center;
-    background-size: cover;
-    background-position-x: right;
-    height: 80vh;
-    display: block;
-    justify-content:left;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-#mobile-img {
-    width: 90%;
-    height: 28vh;
-}
-
-.hero_image1::before {
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
-}
-.hero_text1 {
-    text-align: center;
-}
-
-.hero_text1 h2 {
-    font-size: 50px;
-}
-
-.hero_text1 p {
-    color: var(--menutxt);
-    margin-top: 2%;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-#button1 {
-    display: inline-block;
-    margin-top: 8%;
-    text-align: center;
-    font-family: var(--fonte_terciaria);
-    font-weight: 550;
-    background-color: var(--hover);
-    font-size: 20px;
-    padding: 18px;
-    text-transform: uppercase;
-    border-radius: 10px;
-    box-shadow: 0 3px 5px grey;
-}
-
-#button1:hover {
-    color: var(--menutxt);
-    text-shadow: 1px 1px rgb(74, 74, 74);
-}
-
-
-
-/* ======CONTEÚDO DA PÁGINA QUEM SOMOS======= */
-
-    .box-container h1 {
-        font-size: 50px;
-        font-weight: 600;
-        color: var(--menutxt);
-        margin-top: 10%;
-        margin-left: 8%;
-    }
-
-    .box-container {display: flex; flex-direction: column; width: 100%; }
-
-    .box_one {width: 100%; background-color: var(--bkg2);}
-
-    .box_one p {
-        font-size: 18px;
-        color: var(--menutxt);
-        margin-top: 5%;
-        margin-left: 8%;
-    }
-    .box_two {width: 100%; background-color: var(--bkg2); height: 120vh;}
-    .box_two img {
-        width: 100%;
+        flex-flow: column nowrap;
+        justify-content: space-around;
         align-items: center;
-        margin-top: 10%;
-        margin-right: 5%;
-    }
-
-    #banner_dois {
         margin-top: 5%;
-        text-align: center;
-        /* height: 250vh; */
+        gap: 1em;
+
     }
 
-    #banner_dois p {
-        font-size: 20px;
-        font-family: var(--fonte_secundaria);
-    }
-    #banner_dois h1 {
-        font-size: 40px;
-        color: var(--bkg2);
-        font-weight: 550;
-        margin-bottom: 5%;
-    }
-
-    /* ==================== CONTEÚDO DA PÁGINA DE LOCALIZAÇÃO/VISITE-NOS ====================  */
-
-    .heroimg_local {
-        width: 100%;
-        background: linear-gradient(to right, rgb(87, 86, 86), rgba(46, 31, 2, 0.2)), url(img/WhatsApp\ Image\ 2024-05-28\ at\ 10.25.41.jpeg) no-repeat center center;
-        background-size: cover;
-        background-position-x: right;
-        height: 60vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    }
-    .heroimg_local h2,p {text-shadow: 3px 3px 10px black; color: var(--menutxt);}
-    .herotext_local h2 {color: var(--menutxt); font-family: var(--fonte_secundaria); font-size: 50px;}
-    .herotext_local {color: var(--menutxt); font-family: var(--fonte_secundaria); font-size: 20px; }
-
-    #texto_tres h3 {font-size: 50px; margin-top: 10%; text-align: center; font-weight: 700; font-family: var(--fonte_secundaria);}
-
-    .localizacao {
-    display: flex;
-    flex-direction: row wrap;
-    text-align: center;
-    margin-top: 15%;
-    width: 100%;
-    }
-
-    .mapa_sede { background-color: var(--button_color); color: var(--menutxt); font-size: 30px; text-shadow: 2px 2px 5px black; border-radius: 15px; padding: 15px; box-shadow: 2px 2px 8px lightgray; border: none;}
-
-    .endereco p {
-    font-family: var(--fonte_secundaria);
-    color: var(--menutxt);
-    text-align: left;
-    margin-bottom: 5%;
-    font-size: 25px;
-    text-shadow: none;
-    }
-
-    .localizacao img {width: 50%;}
-
-
-}
-
-@media (min-width: 821px) and (max-width: 992px) {
-       
-    
-    /* ========CONTEÚDO DA HOME PAGE========== */
-    
-    .heroimg_homepage {
-        background: url(img/garotinho-fazendo-licao-de-casa-na-biblioteca.jpg) no-repeat center center;
-        background-size: cover;
-        height: 50vh;
-        display: flex;
-        justify-content:center;
-        align-items:center;
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    }
-
-    .hero_text_hp {
-        text-align: center;
-        justify-content: center;
-    }
-
-    .hero_text_hp p {font-size: 30px; color: var(--menutxt); text-shadow: 2px 2px 8px black;}
-    .hero_text_hp h2 {color: var(--menutxt); font-size: 50px; text-shadow: 2px 2px 8px black; font-family: var(--fonte_secundaria); width: 100%;}
-    .button_one {
-        text-align: center;
-        font-family: var(--fonte_terciaria);
-        background-color: var(--hover);
-        font-size: 20px;
-        color: var(--menutxt);
-        cursor: pointer;
-        padding: 10px 15px;
-        border-radius: 10px;
-        box-shadow: 0 3px 5px grey;
-        text-shadow: 2px 2px 4px black;
-        text-decoration: none;
-    }
-    .container_one {display: flex; flex-flow: row wrap; margin-bottom: 10%;}
-
-    #titulo h2 {color: var(--bkg1); font-family: var(--fonte_secundaria); font-size: 50px; text-align: left; font-weight: 650;}
-    #titulo p {font-size: 20px;}
-    .card-box {width: 35%; box-shadow: 2px 2px 8px lightgray; margin: auto;}
-    .card-box img {width: 100%; height: 40vh;}
-    .card-text {text-align: center; height: 30vh;}
-    .card-box h3, p {font-family: var(--fonte_secundaria);}
-    .card-box h3 {font-weight: 650;}
-    .card-text p {font-size: 18px;}
-
-
-
-    #banner_um {
-        width: 80%;
-        height: 45vh;
-        margin: auto;
-        background: url(img/Imagem2.png); 
-        background-position: center;
-        background-repeat: no-repeat; 
-        background-size: 100% 100%;
-    }
-
-    #banner_um p {
-        color: var(--menutxt);
-        font-size: 10px
-    }
-
-    #cta_one {width: 100%; margin-top: 20%;}
-    #cta_one p {font-size: 30px;}
-    #cta_one h2{font-size: 45px; color: var(--bkg1); font-family: var(--fonte_secundaria);}
-    #social_media {display: flex; flex-flow: row wrap; justify-content: center;}
-    #social_media img {width: 100px; height: 100px;}
-    #resumo_instituicao {height: 60vh;}
-    #resumo_instituicao p {font-size: 20px; text-align: justify;}
-
-    /* CONTEUDO PARA MOBILE - INDEX */
-    /* TOPO - HERO IMAGE 1 BANNER E BOTÕES */
-    .hero_image1 {
-        background: linear-gradient(to right, rgb(1, 1, 1), rgba(46, 31, 2, 0.2)), url(img/fogueira-ia.jpeg) no-repeat center center;
-        background-size: cover;
-        background-position-x: right;
-        height: 80vh;
-        display: block;
-        justify-content:left;
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    }
-
-    #mobile-img {
+    .card {
+        border: 1px solid black;
         width: 90%;
-        height: 28vh;
-    }
-
-    .hero_image1::before {
-        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
-    }
-    .hero_text1 {
-        text-align: center;
-    }
-
-    .hero_text1 h2 {
-        font-size: 50px;
-    }
-
-    .hero_text1 p {
-        color: var(--menutxt);
-        margin-top: 2%;
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-
-    #button1 {
-        display: inline-block;
-        margin-top: 8%;
-        text-align: center;
-        font-family: var(--fonte_terciaria);
-        font-weight: 550;
-        background-color: var(--hover);
-        font-size: 20px;
-        padding: 18px;
-        text-transform: uppercase;
-        border-radius: 10px;
-        box-shadow: 0 3px 5px grey;
-    }
-
-    #button1:hover {
-        color: var(--menutxt);
-        text-shadow: 1px 1px rgb(74, 74, 74);
-    }
-
-    /* =======conteudo da pagina quem somos========= */
-
-    .box-container h1 {
-        font-size: 50px;
-        font-weight: 600;
-        color: var(--menutxt);
-        margin-top: 10%;
-        margin-left: 8%;
-    }
-    
-    .box-container {display: flex; flex-direction: row; width: 100%; }
-    
-    .box_one {width: 60%; background-color: var(--bkg2);}
-    
-    .box_one p {
-        font-size: 18px;
-        color: var(--menutxt);
-        margin-top: 5%;
-        margin-left: 8%;
-    }
-    .box_two {width: 40%; background-color: var(--bkg2); height: 120vh;}
-    .box_two img {
-        width: 100%;
-        align-items: center;
-        margin-top: 10%;
-        margin-right: 5%;
-    }
-
-    #banner_dois {
-        margin-top: 5%;
-        text-align: center;
-        /* height: 250vh; */
-    }
-
-    #banner_dois p {
-        font-size: 20px;
-        font-family: var(--fonte_secundaria);
-    }
-    #banner_dois h1 {
-        font-size: 40px;
-        color: var(--bkg2);
-        font-weight: 550;
-        margin-bottom: 5%;
-    }
-
-    /* ==================== CONTEÚDO DA PÁGINA DE LOCALIZAÇÃO/VISITE-NOS ====================  */
-
-    .heroimg_local {
-        width: 100%;
-        background: linear-gradient(to right, rgb(87, 86, 86), rgba(46, 31, 2, 0.2)), url(img/WhatsApp\ Image\ 2024-05-28\ at\ 10.25.41.jpeg) no-repeat center center;
-        background-size: cover;
-        background-position-x: right;
-        height: 60vh;
+        height: auto;
         display: flex;
+        flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
+        padding: 20px;
+    }
+
+    .card-description  {
         text-align: center;
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    }
-    .heroimg_local h2,p {text-shadow: 3px 3px 10px black; color: var(--menutxt);}
-    .herotext_local h2 {color: var(--menutxt); font-family: var(--fonte_secundaria); font-size: 60px;}
-    .herotext_local {color: var(--menutxt); font-family: var(--fonte_secundaria); font-size: 30px; }
-
-    #texto_tres h3 {font-size: 50px; margin-top: 10%; text-align: center; font-weight: 700; font-family: var(--fonte_secundaria);}
-
-    .localizacao {
-    display: flex;
-    flex-direction: row wrap;
-    text-align: center;
-    margin-top: 15%;
-    width: 100%;
     }
 
-    .mapa_sede { background-color: var(--button_color); color: var(--menutxt); font-size: 30px; text-shadow: 2px 2px 5px black; border-radius: 15px; padding: 15px; box-shadow: 2px 2px 8px lightgray; border: none;}
+    .card img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
 
-    .endereco p {
-    font-family: var(--fonte_secundaria);
-    color: var(--menutxt);
-    text-align: left;
-    margin-bottom: 5%;
-    font-size: 20px;
-    text-shadow: none;
     }
 
-    .localizacao img {width: 50%; height: 80vh;}
+    .card-title {
+        text-align: center;
+    }
 
-}
+    .card-description {
+        color: black;
+        text-shadow: none;
+    }
 
-@media (min-width:993px) {
-       
-    
-  /* ========CONTEÚDO DA HOME PAGE========== */
-  
-    .heroimg_homepage {
-        background: url(img/3d-silhouette-man-with-arms-raised-against-sunset-ocean-landscape.jpg) no-repeat center center;
-        background-size: cover;
-        height: 50vh;
+     .resumo_instituicao {
         display: flex;
-        justify-content:center;
-        align-items:center;
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    }
-
-    .hero_text_hp {
-        text-align: center;
+        flex-flow: column nowrap;
         justify-content: center;
+        align-items: center;
+    }
+    
+    .resumo_instituicao img {
+        width: 50%;
+        height: auto;
     }
 
-    .hero_text_hp p {font-size: 30px; color: var(--menutxt); text-shadow: 2px 2px 8px black;}
-    .hero_text_hp h2 {color: var(--menutxt); font-size: 55px; text-shadow: 2px 2px 8px black; font-family: var(--fonte_secundaria); width: 100%;}
-    .container_one {display: flex; margin-bottom: 10%;}
-
-    #titulo h2 {color: var(--bkg1); font-family: var(--fonte_secundaria); font-size: 55px; text-align: left; font-weight: 650;}
-    #titulo p {font-size: 25px;}
-    .card-box {width: 20%; box-shadow: 2px 2px 8px lightgray; margin: auto;}
-    .card-box img {width: 100%; height: 40vh;}
-    .card-text {text-align: center; height: 35vh;}
-    .card-box h3, p {font-family: var(--fonte_secundaria);}
-    .card-box h3 {font-weight: 650;}
-    .card-text p {font-size: 20px;}
-
-    .button_one {
+    .resumo-paragrafo {
+        font-size: 1rem;
         text-align: center;
-        font-family: var(--fonte_terciaria);
-        background-color: var(--hover);
-        font-size: 22px;
-        color: var(--menutxt);
-        cursor: pointer;
-        padding: 15px 20px;
-        border-radius: 10px;
-        box-shadow: 0 3px 5px grey;
-        text-shadow: 2px 2px 4px black;
-        text-decoration: none;
+        width: 90%;
     }
 
-    #banner_um {
-        width: 80%;
-        height: 48vh;
-        margin: auto;
-        background: url(img/Imagem2.png); 
-        background-position: center;
-        background-repeat: no-repeat; 
-        background-size: 100% 100%;
-    }
 
-    #banner_um p {
-        color: var(--menutxt);
-        font-size: 10px
-    }
-
-    #cta_one {height: 55vh; width: 100%; margin-top: 10%;}
-    #cta_one p {font-size: 40px;}
-    #cta_one h2{font-size: 58px; color: var(--bkg1); font-family: var(--fonte_secundaria); font-weight: 550;}
-    #social_media {display: flex; flex-flow: row wrap; justify-content: center;}
-    #social_media img {width: 100px; height: 100px;}
-    #resumo_instituicao { margin-top: 5%; height: 60vh;}
-    #resumo_instituicao p {font-size: 22px; text-align: justify;}
-
-
-
-
-/* CONTEUDO PARA MOBILE - INDEX */
-/* TOPO - HERO IMAGE 1 BANNER E BOTÕES */
-.hero_image1 {
-    background: linear-gradient(to right, rgb(1, 1, 1), rgba(46, 31, 2, 0.2)), url(img/fogueira-ia.jpeg) no-repeat center center;
-    background-size: cover;
-    background-position-x: right;
-    height: 80vh;
-    display: block;
-    justify-content:left;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-#mobile-img {
-    width: 90%;
-    height: 28vh;
-}
-
-.hero_image1::before {
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
-}
-.hero_text1 {
-    text-align: center;
-}
-
-.hero_text1 h2 {
-    font-size: 50px;
-}
-
-.hero_text1 p {
-    color: var(--menutxt);
-    margin-top: 2%;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-#button1 {
-    display: inline-block;
-    margin-top: 8%;
-    text-align: center;
-    font-family: var(--fonte_terciaria);
-    font-weight: 550;
-    background-color: var(--hover);
-    font-size: 20px;
-    padding: 18px;
-    text-transform: uppercase;
-    border-radius: 10px;
-    box-shadow: 0 3px 5px grey;
-}
-
-#button1:hover {
-    color: var(--menutxt);
-    text-shadow: 1px 1px rgb(74, 74, 74);
-}
-
+@media screen and (min-width: 769 px) and (max-width: 1080px) {
+    
 }
