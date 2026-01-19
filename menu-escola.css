@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --bkgclaro: rgb(239, 255, 10);
+    --bkgescuro: rgb(8, 36, 68);
+    --menubkg:  #fdfd40;
+    --menutxt: white;
+    --button_color: #ffc907;
+    --dropcontent: rgba(216, 194, 31, 0.9);
+    --dropcontent2: rgb(216, 194, 31);
+    --shad: rgb(52, 52, 52);
+    --botaoazulclaro: rgb(12,52,84);
+}
+
+body {
+    width: 100%;
+}
+
+header {
+    height: 80px;
+    background-color: var(--menubkg);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-itens {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-itens li {
+    padding: 5%;
+}
+.menu-itens li a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: var(--bkgescuro);
+    cursor: pointer;
+
+}
+
+.menu-itens li a:hover {
+    color: var(--menutxt);
+    text-shadow: 1px 1px 1px var(--shad);
+}
+
+.menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 90%;
+    width: 300px;
+    height: auto;
+    background-color: var(--dropcontent2);
+    right: 1%;
+    left: 1%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+
+.dropdown {
+    position: relative;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: space-around;
+   
+}
+
+.abrir-menu {
+    display: none;
+    border-radius: 50%;
+    background-color: var(--botaoazulclaro);
+    color: var(--menutxt);
+    font-size: 30px;
+    padding: auto;
+    width: 45px;
+    height: auto;
+    z-index: 10000;
+
+}
+
+.abrir-menu:hover {
+    background-color: rgb(9, 71, 121);
+}
+
+@media screen and (max-width: 768px) {
+
+    body {
+        width: 100%;
+    }
+
+    header {
+    height: 80px;
+    background-color: var(--menubkg);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    .menu-itens {
+        display: none;
+    }
+
+    .abrir-menu {
+        margin-left: 250%;
+        display: block;
+    }
+
+    .menu-aberto {
+    position: fixed;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    top: 80px;
+    width: 100%;
+    left: 0%;
+    background-color: var(--dropcontent)
+}
+}
