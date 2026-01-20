@@ -11,10 +11,11 @@ $botao-cor-claro: #fafa3c;
 $botao-cor-medio: #eee734;
 $botao-cor-medio-escuro: rgba(108, 100, 7, 0.5);
 $botao-cor-escuro: rgb(12,52,84); 
-$tamanhos-fonte-pequena: 18px;
-$tamanhos-fonte-grande: 4rem;
+$tamanhos-fonte-pequena: 1rem;
+$tamanhos-fonte-eg: 4rem;
 $tamanhos-fonte-media: 1.5rem;
 $tamanho-fonte-subtitulo: 3rem;
+$tamanho-fonte-subtitulo-media: 2.5rem;
 
 @mixin displayRowCenter {
     display: flex;
@@ -31,6 +32,13 @@ $tamanho-fonte-subtitulo: 3rem;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
+    align-items: center;
+}
+
+@mixin displayRowSB {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -55,6 +63,24 @@ $tamanho-fonte-subtitulo: 3rem;
     flex-flow: column nowrap;
     justify-content: space-around;
     align-items: flex-start;
+    gap: 0.5em;
+
+}
+
+@mixin displayColumnSB {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5em;
+
+}
+
+@mixin displayColumncenter {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
     gap: 0.5em;
 
 }

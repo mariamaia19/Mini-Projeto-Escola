@@ -118,13 +118,6 @@
     margin-bottom: 5%;
 }
 
-#nav-list {
-    display: block;
-    list-style-type: circle;
-    font-size: 20px;
-    font-weight: bold;
-}
-
 .contato-form {
     margin-top: 1%;
     height: 180vh;

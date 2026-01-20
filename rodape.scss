@@ -1,0 +1,80 @@
+@import 'base.scss';
+
+footer {
+    margin-top: 5%;
+    gap: 1em;
+    background-color: $botao-cor-escuro;
+    width: 100%;
+    @include displayColumnSB;
+    gap: 1em;
+    
+
+    .logo-rodape {
+        width: 20%;
+    }
+
+    .nota {
+        background-color: $botao-cor-escuro;
+        width: 100%;
+
+        h4 {
+            font-size: 1rem;
+            color: $cor-texto-claro;
+            @media (max-width: 768px) {
+                font-size: 0.5rem;
+            }
+        }
+    }
+    .container-footer {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .rodape-info {
+            @include displayColumnSA;
+            margin-left: 1%;
+
+            h3 {
+                font-size: $tamanhos-fonte-media;
+                color: $cor-texto-claro;
+            }
+
+            a {
+                text-decoration: none;
+                color: $cor-texto-claro;
+                font-size: $tamanhos-fonte-pequena;
+
+                .insta-img {
+                        width: 4%;
+                }
+            }
+        }
+
+        @media (max-width: 700px) {
+            @include displayColumncenter;
+
+            .rodape-info {
+                @include displayColumnSA;
+                h3 {
+                    font-size: $tamanhos-fonte-media;
+                    color: $cor-texto-claro;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $cor-texto-escuro;
+                    font-size: $tamanhos-fonte-pequena;
+
+                    .insta-img {
+                        width: 10%;
+                        margin: auto;
+                    }
+                }
+            }
+
+        }     
+    
+    }
+}

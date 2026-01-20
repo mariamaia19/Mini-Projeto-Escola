@@ -563,7 +563,7 @@ Estes padrões aqui estão sendo aplicados para DESKTOP:*/
     }
 
     .hero_text h2 {color: var(--menutxt); font-family: var(--fonte_secundaria); font-size: 3rem;}
-    .hero_text p {color: var(--menutxt); font-family: var(--fonte_secundaria); font-size: 1.5rem; }
+    .hero_text p {color: var(--menutxt); font-family: var(--fonte_secundaria); font-size: 1.5rem; width: 90%;}
 
     .button_findschool {
     display: inline-block;

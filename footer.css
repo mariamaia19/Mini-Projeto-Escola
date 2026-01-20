@@ -13,22 +13,7 @@ Estes padrões aqui estão sendo aplicados para DESKTOP:*/
     box-sizing: border-box;
     font-size: 100%;
   }
-   /*IMPORTANDO FONTES DE FORA (DOWNLOADS)*/
-  @font-face {
-      font-family: 'rustling_treesregular';
-      src: url('webfontkit-20240527-124332/rustling-trees-regular_-_copia-webfont.woff2') format('woff2'),
-           url('webfontkit-20240527-124332/rustling-trees-regular_-_copia-webfont.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-  }
-  
-  @font-face {
-      font-family: 'latomedium';
-      src: url('lato-mediun-webfont.woff2') format('woff2'),
-           url('lato-mediun-webfont.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-  }
+
 
   :root {
     --bkg1: rgb(12,52,84);
@@ -136,7 +121,6 @@ footer {
         flex-flow: column wrap;
         justify-content: space-around;
         /* PARA QUE CADA ITEM DO FOOTER POSSA ESTAR BEM ENCAIXADO EM SUAS POSIÇÕES, COLOQUEI O DISPLAY FLEX E DEPOIS AJUSTEI PARA A DIREÇÃO DE COLUNA, POIS O LOGO FICA EMCIMA DOS CONTEÚDOS E OS CONTEÚDOS DE RODAPÉ NO MEIO E A VERSÃO DE COPYRIGHTING NO FINALX E O JUSTIFY-CONTENT COMO SPACE-BETWEEN PARA QUE TODOS OS CONTEÚDOS FIQUEM DISPOSTOS COLADOS NA DIV-PAI */
-        width: 100%;
     }
 
     #logotipo {

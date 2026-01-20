@@ -1,0 +1,92 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+/*CRIANDO VARIÁVEIS SCSS*/
+footer {
+  margin-top: 5%;
+  gap: 1em;
+  background-color: rgb(12, 52, 84);
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5em;
+  gap: 1em;
+}
+footer .logo-rodape {
+  width: 20%;
+}
+footer .nota {
+  background-color: rgb(12, 52, 84);
+  width: 100%;
+}
+footer .nota h4 {
+  font-size: 1rem;
+  color: white;
+}
+@media (max-width: 768px) {
+  footer .nota h4 {
+    font-size: 0.5rem;
+  }
+}
+footer .container-footer {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .container-footer .rodape-info {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 0.5em;
+  margin-left: 1%;
+}
+footer .container-footer .rodape-info h3 {
+  font-size: 1.5rem;
+  color: white;
+}
+footer .container-footer .rodape-info a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+footer .container-footer .rodape-info a .insta-img {
+  width: 4%;
+}
+@media (max-width: 700px) {
+  footer .container-footer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+  }
+  footer .container-footer .rodape-info {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 0.5em;
+  }
+  footer .container-footer .rodape-info h3 {
+    font-size: 1.5rem;
+    color: white;
+  }
+  footer .container-footer .rodape-info a {
+    text-decoration: none;
+    color: rgb(8, 36, 68);
+    font-size: 1rem;
+  }
+  footer .container-footer .rodape-info a .insta-img {
+    width: 10%;
+    margin: auto;
+  }
+}/*# sourceMappingURL=rodape.css.map */
