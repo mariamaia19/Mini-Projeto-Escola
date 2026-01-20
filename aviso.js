@@ -1,0 +1,3 @@
+ window.alert("Este site reproduz um site de uma escola MERAMENTE FICTÍCIA. Não coloque dados sensíveis nos formulários. o site foi criado para fins de PORTIFÓLIO. Caso deseje entrar em contato com o desenvolvedor(a), utilize o botão de whatsapp que está fixado à direita da página ou acesse os links que estão no rodapé da página");
+
+    //usar o window.alert sem a necessidade de criar uma função ou eventos;
