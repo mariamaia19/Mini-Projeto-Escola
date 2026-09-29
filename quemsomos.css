@@ -228,7 +228,7 @@ input::placeholder {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--button_color);
+    background-color: yellow;
     border-radius: 10px;
     overflow:hidden;
     transition: .5s ease;
